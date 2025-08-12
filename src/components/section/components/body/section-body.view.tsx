@@ -1,0 +1,30 @@
+import { cn } from '@/lib/utils';
+import type { SectionBodyProps } from './section-body.types';
+
+export function SectionBodyView({
+  children,
+  className,
+  style,
+  backgroundImage,
+  ...props
+}: SectionBodyProps) {
+  const internalStyle = backgroundImage
+    ? {
+        backgroundImage: `url(${backgroundImage})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+        ...style,
+      }
+    : { ...style };
+
+  return (
+    <div
+      className={cn('w-full p-4 md:mx-auto md:max-w-[800px] md:p-8', className)}
+      style={internalStyle}
+      {...props}
+    >
+      {children}
+    </div>
+  );
+}
