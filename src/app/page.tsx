@@ -1,7 +1,9 @@
 export default function Home() {
   return (
-    <div>
-      <h1>Cristallo Empresarial - Landing Page</h1>
+    <div className="container mx-auto">
+      <h1 className="text-center font-bold text-3xl">
+        Cristallo Empresarial - Landing Page
+      </h1>
     </div>
   );
 }
