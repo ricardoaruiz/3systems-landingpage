@@ -1,4 +1,4 @@
-import type { SectionProps } from './components/section.types';
+import type { SectionProps } from './section.types';
 
 export function SectionView({
   children,
