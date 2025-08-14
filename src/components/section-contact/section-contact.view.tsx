@@ -14,7 +14,7 @@ export function SectionContactView() {
         </p>
 
         <div className="flex w-full flex-col items-center justify-center gap-4 bg-zinc-300 px-4 pt-4 md:flex-row lg:gap-20">
-          <div className="space-y-3">
+          <div className="space-y-3" data-aos="fade-right">
             <p className="text-center font-semibold text-2xl/relaxed text-primary-cristallo ">
               Cinthya Hayane de Carvalho
             </p>
@@ -31,7 +31,7 @@ export function SectionContactView() {
               </p>
             </div>
           </div>
-          <div className="relative h-[330px] w-[216px]">
+          <div className="relative h-[330px] w-[216px]" data-aos="fade-left">
             <Image
               alt="Transformação da Empresa"
               fill

@@ -20,28 +20,18 @@ export function SectionEventsView() {
 
       <Section.Body className="flex flex-col gap-3 md:flex-row md:gap-6">
         <div className="flex w-full flex-col gap-3 md:max-w-[500px]">
-          <CardContent
-            description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            hideBorderDesktop
-            title="Title"
-          />
-          <CardContent
-            description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            hideBorderDesktop
-            title="Title"
-          />
-          <CardContent
-            description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            hideBorderDesktop
-            title="Title"
-          />
-          <CardContent
-            description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-            hideBorderDesktop
-            title="Title"
-          />
+          {Array.from({ length: 4 }).map((_, index) => (
+            <CardContent
+              data-aos="fade-right"
+              description="lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+              hideBorderDesktop
+              // biome-ignore lint/suspicious/noArrayIndexKey: removing it soon
+              key={index}
+              title="Title"
+            />
+          ))}
         </div>
-        <div className="hidden flex-1 md:flex md:flex-col">
+        <div className="hidden flex-1 md:flex md:flex-col" data-aos="fade-left">
           <div className="relative h-[300px]">
             <Image
               alt="Mulher com dinheiro na mão operando uma calculadora"
