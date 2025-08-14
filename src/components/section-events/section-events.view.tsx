@@ -6,16 +6,13 @@ import { Section } from '../section';
 export function SectionEventsView() {
   return (
     <Section.Container className="lg:pb-4">
-      <Section.Header
-        backgroundImage={'/images/fundo_amarelo.webp'}
-        className="flex flex-col items-center justify-center gap-4 bg-primary-cristallo"
-      >
+      <Section.Header className="flex flex-col items-center justify-center gap-4 bg-tertiary-cristallo">
         <h2 className="text-center font-bold text-xl/snug text-zinc-900 md:max-w-[684px] md:text-5xl/snug">
           Eventos
         </h2>
-        <div className="h-[2px] w-full max-w-48 bg-secondary-cristallo md:max-w-96" />
+        <div className="h-[2px] w-full max-w-48 bg-zinc-900 md:max-w-96" />
 
-        <p className="text-center font-bold text-base/snug text-zinc-900 md:max-w-[684px] md:text-4xl/snug">
+        <p className="text-center font-bold text-base/snug text-zinc-900 md:max-w-[1200px] md:text-4xl/snug">
           Colaboramos com você para definir objetivos claros, planejar e
           executar o evento de forma eficiente.
         </p>

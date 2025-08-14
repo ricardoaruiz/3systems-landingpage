@@ -10,9 +10,9 @@ export function SectionFinancialView() {
         <h2 className="text-center font-bold text-xl/snug text-zinc-50 md:max-w-[684px] md:text-5xl/snug">
           Terceirização Financeira
         </h2>
-        <div className="h-[2px] w-full max-w-48 bg-tertiary-cristallo md:max-w-96" />
+        <div className="h-[2px] w-full max-w-48 bg-zinc-50 md:max-w-96" />
 
-        <p className="text-center font-bold text-base/snug text-zinc-50 md:max-w-[684px] md:text-4xl/snug">
+        <p className="text-center font-bold text-base/snug text-zinc-50 md:max-w-[1200px] md:text-4xl/snug">
           Cuidamos das rotinas do financeiro para que você tenha mais tempo para
           focar naquilo que importa: o crescimento do seu negócio.
         </p>
