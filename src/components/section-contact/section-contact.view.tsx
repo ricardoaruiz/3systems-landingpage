@@ -6,14 +6,14 @@ import { Section } from '../section';
 export function SectionContactView() {
   return (
     <Section.Container className="bg-zinc-200">
-      <Section.Body className="flex flex-col items-center justify-center gap-4 px-0 md:max-w-full md:gap-8">
+      <Section.Body className="flex flex-col items-center justify-center gap-4 px-0 pb-0 md:max-w-full md:gap-8">
         <p className="w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-cristallo md:max-w-[1026px] md:px-8 md:pb-8 md:text-3xl">
           Nossos serviços são personalizados para atender às demandas
           específicas do seu negócio. Para mais informações, entre em contato e
           solicite um diagnóstico gratuito para obter uma proposta detalhada.
         </p>
 
-        <div className="flex w-full flex-col items-center justify-center gap-4 bg-zinc-300 px-4 pt-4 md:flex-row">
+        <div className="flex w-full flex-col items-center justify-center gap-4 bg-zinc-300 px-4 pt-4 md:flex-row lg:gap-20">
           <div className="space-y-3">
             <p className="text-center font-semibold text-2xl/relaxed text-primary-cristallo ">
               Cinthya Hayane de Carvalho
