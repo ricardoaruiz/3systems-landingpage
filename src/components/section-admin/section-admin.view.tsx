@@ -5,7 +5,7 @@ import { Section } from '../section';
 
 export function SectionAdminView() {
   return (
-    <Section.Container>
+    <Section.Container className="lg:pb-4">
       <Section.Header className="flex flex-col items-center justify-center gap-4 bg-primary-cristallo">
         <h2 className="text-center font-bold text-xl/snug text-zinc-50 md:max-w-[684px] md:text-5xl/snug">
           Assessoria Administrativa

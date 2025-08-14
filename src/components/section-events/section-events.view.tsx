@@ -5,7 +5,7 @@ import { Section } from '../section';
 
 export function SectionEventsView() {
   return (
-    <Section.Container>
+    <Section.Container className="lg:pb-4">
       <Section.Header
         backgroundImage={'/images/fundo_amarelo.webp'}
         className="flex flex-col items-center justify-center gap-4 bg-primary-cristallo"
