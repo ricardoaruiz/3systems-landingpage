@@ -7,7 +7,7 @@ export function SectionContactView() {
   return (
     <Section.Container className="bg-zinc-200">
       <Section.Body className="flex flex-col items-center justify-center gap-4 px-0 pb-0 md:max-w-full md:gap-8">
-        <p className="w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-cristallo md:max-w-[1026px] md:px-8 md:pb-8 md:text-3xl">
+        <p className="w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-cristallo md:max-w-[1026px] md:px-8 md:pb-8 md:text-3xl/relaxed">
           Nossos serviços são personalizados para atender às demandas
           específicas do seu negócio. Para mais informações, entre em contato e
           solicite um diagnóstico gratuito para obter uma proposta detalhada.
