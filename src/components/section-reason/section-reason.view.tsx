@@ -3,7 +3,7 @@ import { Section } from '../section';
 
 export function SectionReasonView() {
   return (
-    <Section.Container className="lg:pb-4">
+    <Section.Container className="scroll-mt-15 lg:pb-4 " id="reasons">
       <Section.Header className="flex items-center justify-center bg-primary-cristallo">
         <Section.Title>
           Motivos para contratar uma assesssoria administrativa/financeira

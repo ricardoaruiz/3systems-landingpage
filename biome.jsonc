@@ -3,5 +3,12 @@
   "extends": ["ultracite"],
   "files": {
     "includes": ["src/**/*", "!**/node_modules/**", "!**/*.css"]
+  },
+  "linter": {
+    "rules": {
+      "style": {
+        "useFilenamingConvention": "off"
+      }
+    }
   }
 }

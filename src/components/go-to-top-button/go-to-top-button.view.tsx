@@ -1,0 +1,34 @@
+'use client';
+
+import { ChevronsUp } from 'lucide-react';
+import { useScroll } from '@/hooks/useScroll';
+import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
+
+export function GoToTopButtonView() {
+  const { isOnTop } = useScroll();
+
+  if (isOnTop) {
+    return null;
+  }
+
+  return (
+    <div className="fixed right-4 bottom-4 z-50">
+      <Tooltip>
+        <TooltipTrigger asChild>
+          <button
+            className="flex size-16 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-secondary-cristallo p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-cristallo"
+            onClick={() => {
+              window.scrollTo(0, 0);
+            }}
+            type="button"
+          >
+            <ChevronsUp className="size-10" />
+          </button>
+        </TooltipTrigger>
+        <TooltipContent>
+          <p>Voltar ao início</p>
+        </TooltipContent>
+      </Tooltip>
+    </div>
+  );
+}

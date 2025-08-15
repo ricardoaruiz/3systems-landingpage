@@ -5,7 +5,7 @@ import { SideContent } from '../side-content';
 
 export function SectionFinancialView() {
   return (
-    <Section.Container className="lg:pb-4">
+    <Section.Container className="scroll-mt-15 lg:pb-4 " id="financial">
       <Section.Header className="flex flex-col items-center justify-center gap-4 bg-primary-cristallo">
         <Section.Title>Terceirização Financeira</Section.Title>
         <Section.Separator />

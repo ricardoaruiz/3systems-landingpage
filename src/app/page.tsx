@@ -1,4 +1,6 @@
 import { Footer } from '@/components/footer';
+import { GoToTopButtonView } from '@/components/go-to-top-button/go-to-top-button.view';
+import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
 import { SectionAdmin } from '@/components/section-admin';
 import { SectionCallToAction } from '@/components/section-call-to-action';
@@ -10,7 +12,7 @@ import { SectionReason } from '@/components/section-reason';
 export default function Home() {
   return (
     <main>
-      {/* <Header /> */}
+      <Header />
       <Hero />
       <SectionReason />
       <SectionCallToAction />
@@ -19,6 +21,7 @@ export default function Home() {
       <SectionEvents />
       <SectionContact />
       <Footer />
+      <GoToTopButtonView />
     </main>
   );
 }

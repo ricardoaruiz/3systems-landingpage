@@ -5,7 +5,7 @@ import { SideContent } from '../side-content';
 
 export function SectionAdminView() {
   return (
-    <Section.Container className="lg:pb-4">
+    <Section.Container className="scroll-mt-15 lg:pb-4 " id="administrative">
       <Section.Header className="flex flex-col items-center justify-center gap-4 bg-secondary-cristallo">
         <Section.Title>Assessoria Administrativa</Section.Title>
         <Section.Separator />

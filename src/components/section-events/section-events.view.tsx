@@ -5,7 +5,7 @@ import { SideContent } from '../side-content';
 
 export function SectionEventsView() {
   return (
-    <Section.Container className="lg:pb-4">
+    <Section.Container className="scroll-mt-15 lg:pb-4 " id="events">
       <Section.Header className="flex flex-col items-center justify-center gap-4 bg-tertiary-cristallo">
         <Section.Title className="text-zinc-900">Eventos</Section.Title>
         <Section.Separator className="bg-zinc-900" />
