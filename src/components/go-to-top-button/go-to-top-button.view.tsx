@@ -7,12 +7,11 @@ import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
 export function GoToTopButtonView() {
   const { isOnTop } = useScroll();
 
-  if (isOnTop) {
-    return null;
-  }
-
   return (
-    <div className="fixed right-4 bottom-4 z-50 animate-shake">
+    <div
+      className="fixed right-4 bottom-4 z-50 animate-shake1"
+      data-aos={isOnTop ? 'fade-left' : 'fade-right'}
+    >
       <Tooltip>
         <TooltipTrigger asChild>
           <button

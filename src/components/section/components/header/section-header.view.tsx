@@ -20,7 +20,7 @@ export function SectionHeaderView({
 
   return (
     <header
-      className={cn('p-4 md:p-8', className)}
+      className={cn('p-4 shadow-lg md:p-8', className)}
       style={internalStyle}
       {...props}
     >
