@@ -3,7 +3,7 @@ import Image from 'next/image';
 export function FooterView() {
   return (
     <footer className="bg-zinc-300">
-      <div className="mx-auto max-w-[1440px]">
+      <div className="mx-auto max-w-[1440px] md:hidden">
         <Image
           alt="Footer imagage"
           className="h-auto w-full"

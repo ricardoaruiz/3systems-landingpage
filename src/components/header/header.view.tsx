@@ -29,6 +29,7 @@ export function HeaderView() {
         <NavLink href="#financial">Terceirização Financeira</NavLink>
         <NavLink href="#administrative">Assessoria Administrativa</NavLink>
         <NavLink href="#events">Eventos</NavLink>
+        <NavLink href="#contact">Contato</NavLink>
       </Nav>
     </header>
   );

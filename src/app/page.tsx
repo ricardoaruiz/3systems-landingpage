@@ -1,4 +1,3 @@
-import { Footer } from '@/components/footer';
 import { GoToTopButtonView } from '@/components/go-to-top-button/go-to-top-button.view';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
@@ -20,7 +19,7 @@ export default function Home() {
       <SectionAdmin />
       <SectionEvents />
       <SectionContact />
-      <Footer />
+      {/* <Footer /> */}
       <GoToTopButtonView />
     </main>
   );
