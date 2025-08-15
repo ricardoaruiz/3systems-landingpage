@@ -1,9 +1,9 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect } from 'react';
 import { useScroll } from '@/hooks/useScroll';
 import { cn } from '@/lib/utils';
+import { Nav, NavLink } from './components';
 
 export function HeaderView() {
   const { isOnTop } = useScroll();
@@ -18,42 +18,18 @@ export function HeaderView() {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 hidden h-15 bg-zinc-800/20 opacity-100 transition-all duration-300 lg:block',
+        'sticky top-0 z-50 hidden h-15 bg-zinc-300/20 opacity-100 shadow-md transition-all duration-300 lg:block',
         {
           'h-0 opacity-0': !isOnTop,
         }
       )}
     >
-      <nav
-        className={cn(
-          'container mx-auto flex h-full items-center justify-center gap-8'
-        )}
-      >
-        <Link
-          className="cursor-pointer font-semibold text-primary-cristallo text-xl transition-all hover:text-secondary-cristallo"
-          href="#reasons"
-        >
-          Porque nos contratar?
-        </Link>
-        <Link
-          className="cursor-pointer font-semibold text-primary-cristallo text-xl transition-all hover:text-secondary-cristallo"
-          href="#financial"
-        >
-          Terceirização Financeira
-        </Link>
-        <Link
-          className="cursor-pointer font-semibold text-primary-cristallo text-xl transition-all hover:text-secondary-cristallo"
-          href="#administrative"
-        >
-          Assessoria Administrativa
-        </Link>
-        <Link
-          className="cursor-pointer font-semibold text-primary-cristallo text-xl transition-all hover:text-secondary-cristallo"
-          href="#events"
-        >
-          Eventos
-        </Link>
-      </nav>
+      <Nav>
+        <NavLink href="#reasons">Porque nos contratar?</NavLink>
+        <NavLink href="#financial">Terceirização Financeira</NavLink>
+        <NavLink href="#administrative">Assessoria Administrativa</NavLink>
+        <NavLink href="#events">Eventos</NavLink>
+      </Nav>
     </header>
   );
 }
