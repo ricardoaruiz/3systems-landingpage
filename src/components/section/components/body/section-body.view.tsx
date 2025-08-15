@@ -21,7 +21,7 @@ export function SectionBodyView({
   return (
     <div
       className={cn(
-        'w-full px-4 py-4 md:mx-auto md:max-w-[840px] lg:px-0 lg:pt-8',
+        'w-full px-4 py-4 md:mx-auto md:max-w-[1000px] lg:px-0 lg:pt-8',
         className
       )}
       style={internalStyle}

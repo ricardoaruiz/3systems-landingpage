@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import { Footer } from '@/components/footer';
 import { Header } from '@/components/header';
 import { Hero } from '@/components/hero';
 import { SectionAdmin } from '@/components/section-admin';
@@ -19,20 +19,7 @@ export default function Home() {
       <SectionAdmin />
       <SectionEvents />
       <SectionContact />
-
-      <footer className="bg-zinc-300">
-        <div className="mx-auto max-w-[1440px]">
-          <Image
-            alt="Footer imagage"
-            className="h-auto w-full"
-            height={712}
-            quality={100}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            src="/images/footer.webp"
-            width={1440}
-          />
-        </div>
-      </footer>
+      <Footer />
     </main>
   );
 }

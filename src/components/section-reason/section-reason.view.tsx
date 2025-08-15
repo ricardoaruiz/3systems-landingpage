@@ -16,7 +16,7 @@ export function SectionReasonView() {
             <CardContent
               data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
               description="Uma assessoria ajuda a estruturar processos internos, melhorar a organização documental e otimizar fluxos de trabalho, evitando retrabalho e desperdício de tempo."
-              hideBorderDesktop
+              // hideBorderDesktop
               // biome-ignore lint/suspicious/noArrayIndexKey: removing it soon
               key={index}
               title="Organização e Eficiência"
