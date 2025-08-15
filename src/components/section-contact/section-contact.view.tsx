@@ -36,6 +36,7 @@ export function SectionContactView() {
               alt="Transformação da Empresa"
               fill
               quality={100}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
               src={cinthyaLado}
             />
           </div>

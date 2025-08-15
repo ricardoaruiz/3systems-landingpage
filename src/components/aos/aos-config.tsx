@@ -6,7 +6,7 @@ import { useEffect } from 'react';
 export function AosConfig() {
   useEffect(() => {
     AOS.init({
-      offset: 250,
+      offset: 100,
       duration: 400,
       easing: 'ease-in-sine',
       disable: 'mobile',

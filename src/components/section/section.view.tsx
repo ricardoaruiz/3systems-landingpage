@@ -1,8 +1,10 @@
+import { cn } from '@/lib/utils';
 import type { SectionProps } from './section.types';
 
 export function SectionView({
   children,
   backgroundImage,
+  className,
   style,
   ...props
 }: SectionProps) {
@@ -17,7 +19,7 @@ export function SectionView({
     : { ...style };
 
   return (
-    <section style={internalStyle} {...props}>
+    <section className={cn(className)} style={internalStyle} {...props}>
       {children}
     </section>
   );

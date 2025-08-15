@@ -17,7 +17,13 @@ export function SideContentView({
     >
       {image && alt && (
         <div className="relative h-[300px]">
-          <Image alt={alt} className="object-cover" fill src={image} />
+          <Image
+            alt={alt}
+            className="object-cover"
+            fill
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+            src={image}
+          />
         </div>
       )}
 

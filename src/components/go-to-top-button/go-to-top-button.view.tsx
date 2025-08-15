@@ -16,7 +16,7 @@ export function GoToTopButtonView() {
       <Tooltip>
         <TooltipTrigger asChild>
           <button
-            className="flex size-16 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-secondary-cristallo p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-cristallo"
+            className="flex size-12 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-secondary-cristallo p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-cristallo md:size-16"
             onClick={() => {
               window.scrollTo(0, 0);
             }}
