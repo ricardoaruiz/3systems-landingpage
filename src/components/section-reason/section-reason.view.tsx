@@ -5,9 +5,9 @@ export function SectionReasonView() {
   return (
     <Section.Container className="lg:pb-4">
       <Section.Header className="flex items-center justify-center bg-primary-cristallo">
-        <h2 className="text-center font-bold text-xl/relaxed text-zinc-50 md:max-w-[650px] md:text-4xl/snug">
+        <Section.Title>
           Motivos para contratar uma assesssoria administrativa/financeira
-        </h2>
+        </Section.Title>
       </Section.Header>
 
       <Section.Body>
@@ -16,7 +16,6 @@ export function SectionReasonView() {
             <CardContent
               data-aos={index % 2 === 0 ? 'fade-right' : 'fade-left'}
               description="Uma assessoria ajuda a estruturar processos internos, melhorar a organização documental e otimizar fluxos de trabalho, evitando retrabalho e desperdício de tempo."
-              // hideBorderDesktop
               // biome-ignore lint/suspicious/noArrayIndexKey: removing it soon
               key={index}
               title="Organização e Eficiência"

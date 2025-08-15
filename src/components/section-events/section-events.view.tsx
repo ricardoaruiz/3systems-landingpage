@@ -1,25 +1,22 @@
-import Image from 'next/image';
 import palestra from '../../../public/images/palestra.webp';
 import { CardContent } from '../card-content';
 import { Section } from '../section';
+import { SideContent } from '../side-content';
 
 export function SectionEventsView() {
   return (
     <Section.Container className="lg:pb-4">
       <Section.Header className="flex flex-col items-center justify-center gap-4 bg-tertiary-cristallo">
-        <h2 className="text-center font-bold text-xl/snug text-zinc-900 md:max-w-[684px] md:text-5xl/snug">
-          Eventos
-        </h2>
-        <div className="h-[2px] w-full max-w-48 bg-zinc-900 md:max-w-96" />
-
-        <p className="text-center font-bold text-base/snug text-zinc-900 md:max-w-[1200px] md:text-4xl/snug">
+        <Section.Title className="text-zinc-900">Eventos</Section.Title>
+        <Section.Separator className="bg-zinc-900" />
+        <Section.Description className="text-zinc-900">
           Colaboramos com você para definir objetivos claros, planejar e
           executar o evento de forma eficiente.
-        </p>
+        </Section.Description>
       </Section.Header>
 
       <Section.Body className="flex flex-col gap-3 md:flex-row md:gap-6">
-        <div className="flex w-full flex-col gap-3 md:max-w-[500px]">
+        <div className="flex w-full flex-2/3 flex-col gap-3 ">
           {Array.from({ length: 4 }).map((_, index) => (
             <CardContent
               data-aos="fade-right"
@@ -31,16 +28,12 @@ export function SectionEventsView() {
             />
           ))}
         </div>
-        <div className="hidden flex-1 md:flex md:flex-col" data-aos="fade-left">
-          <div className="relative h-[300px]">
-            <Image
-              alt="Mulher com dinheiro na mão operando uma calculadora"
-              className="object-cover"
-              fill
-              src={palestra}
-            />
-          </div>
-          <div className="flex-1 space-y-4 bg-tertiary-cristallo p-4 text-center font-bold text-xl/relaxed text-zinc-900 shadow-md">
+        <SideContent.Container
+          alt="Sala com vária pessoas assistindo uma palestra"
+          data-aos="fade-left"
+          image={palestra}
+        >
+          <SideContent.Content className="bg-tertiary-cristallo text-zinc-900">
             <p>
               Um bom serviços de assessoria administrativa pode ser a garantia
               de um funcionamento mais organizado, fluido e acima de tudo
@@ -52,8 +45,8 @@ export function SectionEventsView() {
               demandas e tratamos pendências, garantindo a eficiência e
               continuidade do seu negócio.
             </p>
-          </div>
-        </div>
+          </SideContent.Content>
+        </SideContent.Container>
       </Section.Body>
     </Section.Container>
   );

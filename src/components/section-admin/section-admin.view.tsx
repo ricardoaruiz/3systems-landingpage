@@ -1,24 +1,21 @@
-import Image from 'next/image';
 import administradora from '../../../public/images/administradora.webp';
 import { CardContent } from '../card-content';
 import { Section } from '../section';
+import { SideContent } from '../side-content';
 
 export function SectionAdminView() {
   return (
     <Section.Container className="lg:pb-4">
       <Section.Header className="flex flex-col items-center justify-center gap-4 bg-secondary-cristallo">
-        <h2 className="text-center font-bold text-xl/snug text-zinc-50 md:max-w-[684px] md:text-5xl/snug">
-          Assessoria Administrativa
-        </h2>
-        <div className="h-[2px] w-full max-w-48 bg-zinc-50 md:max-w-96" />
-
-        <p className="text-center font-bold text-base/snug text-zinc-50 md:max-w-[1200px] md:text-4xl/snug">
+        <Section.Title>Assessoria Administrativa</Section.Title>
+        <Section.Separator />
+        <Section.Description>
           Suporte no dia a dia da sua empresa
-        </p>
+        </Section.Description>
       </Section.Header>
 
       <Section.Body className="flex flex-col gap-3 md:flex-row md:gap-6">
-        <div className="flex w-full flex-col gap-3 md:max-w-[500px]">
+        <div className="flex w-full flex-2/3 flex-col gap-3">
           {Array.from({ length: 4 }).map((_, index) => (
             <CardContent
               data-aos="fade-right"
@@ -30,16 +27,12 @@ export function SectionAdminView() {
             />
           ))}
         </div>
-        <div className="hidden flex-1 md:flex md:flex-col" data-aos="fade-left">
-          <div className="relative h-[300px]">
-            <Image
-              alt="Mulher com dinheiro na mão operando uma calculadora"
-              className="object-cover"
-              fill
-              src={administradora}
-            />
-          </div>
-          <div className="flex-1 space-y-4 bg-secondary-cristallo p-4 text-center font-bold text-xl/relaxed text-zinc-50 shadow-md">
+        <SideContent.Container
+          alt="Mulher com operando um computador"
+          data-aos="fade-left"
+          image={administradora}
+        >
+          <SideContent.Content>
             <p>
               Um bom serviços de assessoria administrativa pode ser a garantia
               de um funcionamento mais organizado, fluido e acima de tudo
@@ -51,8 +44,8 @@ export function SectionAdminView() {
               demandas e tratamos pendências, garantindo a eficiência e
               continuidade do seu negócio.
             </p>
-          </div>
-        </div>
+          </SideContent.Content>
+        </SideContent.Container>
       </Section.Body>
     </Section.Container>
   );

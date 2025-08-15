@@ -5,7 +5,12 @@ import { useEffect } from 'react';
 
 export function AosConfig() {
   useEffect(() => {
-    AOS.init();
+    AOS.init({
+      offset: 250,
+      duration: 400,
+      easing: 'ease-in-sine',
+      disable: 'mobile',
+    });
   }, []);
 
   return null;
