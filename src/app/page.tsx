@@ -19,7 +19,6 @@ export default function Home() {
       <SectionAdmin />
       <SectionEvents />
       <SectionContact />
-      {/* <Footer /> */}
       <GoToTopButtonView />
     </main>
   );
