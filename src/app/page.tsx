@@ -7,12 +7,15 @@ import { SectionContact } from '@/components/section-contact';
 import { SectionEvents } from '@/components/section-events';
 import { SectionFinancial } from '@/components/section-financial';
 import { SectionReason } from '@/components/section-reason';
+import { getHero } from '@/services';
 
-export default function Home() {
+export default async function Home() {
+  const heroData = await getHero();
+
   return (
     <main>
       <Header />
-      <Hero />
+      <Hero {...heroData} />
       <SectionReason />
       <SectionCallToAction />
       <SectionFinancial />
