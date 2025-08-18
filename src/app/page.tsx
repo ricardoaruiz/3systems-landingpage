@@ -6,6 +6,7 @@ import { SectionContact } from '@/components/section-contact';
 import { SectionContent } from '@/components/section-content';
 import { getHero } from '@/services';
 import { getCallToAction } from '@/services/call-to-actiion';
+import { getContact } from '@/services/contact/fetcher';
 import { getMenu } from '@/services/menu/fetcher';
 import { getSections } from '@/services/section';
 
@@ -14,6 +15,7 @@ export default async function Home() {
   const heroData = await getHero();
   const callToActionData = await getCallToAction();
   const sectionsData = await getSections();
+  const contactData = await getContact();
 
   return (
     <main>
@@ -29,7 +31,7 @@ export default async function Home() {
         );
       })}
 
-      <SectionContact />
+      <SectionContact data={contactData} />
 
       <GoToTopButtonView />
     </main>
