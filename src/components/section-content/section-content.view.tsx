@@ -11,7 +11,7 @@ export function SectionContentView({
   ...props
 }: SectionContentProps) {
   const hasSideContent = !!data.sideContent;
-  const showSeparator = !!data.description;
+  const hasDescription = !!data.description;
 
   const backgroundStyle = data.color ? { backgroundColor: data.color.hex } : {};
   const textColorStyle = data.textColor ? { color: data.textColor.hex } : {};
@@ -29,10 +29,13 @@ export function SectionContentView({
         style={{ ...backgroundStyle, ...textColorStyle }}
       >
         <Section.Title>{data.subject}</Section.Title>
-        {showSeparator && (
-          <Section.Separator style={{ ...separatorColorStyle }} />
+
+        {hasDescription && (
+          <>
+            <Section.Separator style={{ ...separatorColorStyle }} />
+            <Section.Description>{data.description}</Section.Description>
+          </>
         )}
-        <Section.Description>{data.description}</Section.Description>
       </Section.Header>
 
       <Section.Body className="flex flex-col gap-3 md:flex-row md:gap-6">
