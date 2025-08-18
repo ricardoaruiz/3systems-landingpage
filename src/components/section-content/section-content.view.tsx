@@ -11,8 +11,14 @@ export function SectionContentView({
   ...props
 }: SectionContentProps) {
   const hasSideContent = !!data.sideContent;
+  const showSeparator = !!data.description;
+
   const backgroundStyle = data.color ? { backgroundColor: data.color.hex } : {};
   const textColorStyle = data.textColor ? { color: data.textColor.hex } : {};
+  const separatorColorStyle = data.textColor
+    ? { backgroundColor: data.textColor.hex }
+    : {};
+
   return (
     <Section.Container
       className={cn('scroll-mt-15 lg:pb-4 ', className)}
@@ -23,7 +29,9 @@ export function SectionContentView({
         style={{ ...backgroundStyle, ...textColorStyle }}
       >
         <Section.Title>{data.subject}</Section.Title>
-        <Section.Separator />
+        {showSeparator && (
+          <Section.Separator style={{ ...separatorColorStyle }} />
+        )}
         <Section.Description>{data.description}</Section.Description>
       </Section.Header>
 
