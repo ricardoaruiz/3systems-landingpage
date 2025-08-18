@@ -18,7 +18,9 @@ export const SECTIONS_QUERY = `*[_type == "section"] | order(order asc){
   },
   "sideContent": sideContent->{
     "image": image.asset->{
-      url
+      url,
+      title,
+      altText
     },
     description
   }

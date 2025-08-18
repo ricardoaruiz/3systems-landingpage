@@ -45,11 +45,10 @@ export function SectionContentView({
 
         {hasSideContent && (
           <SideContent.Container
-            alt="Sala com vária pessoas assistindo uma palestra"
+            alt={data.sideContent.image.altText}
             data-aos="fade-left"
             image={data.sideContent.image.url}
           >
-            {/* <SideContent.Content className="bg-tertiary-cristallo text-zinc-900"> */}
             <SideContent.Content
               style={{ ...backgroundStyle, ...textColorStyle }}
             >

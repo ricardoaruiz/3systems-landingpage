@@ -24,6 +24,8 @@ type SideContent = {
 
 type Image = {
   url: string;
+  title: string;
+  altText: string;
 };
 
 type Color = {
