@@ -1,3 +1,5 @@
+import type { Color, Image } from '../types';
+
 export type Section = {
   id: string;
   slug: string;
@@ -20,14 +22,4 @@ type Card = {
 type SideContent = {
   image: Image;
   description: string;
-};
-
-type Image = {
-  url: string;
-  title: string;
-  altText: string;
-};
-
-type Color = {
-  hex: string;
 };

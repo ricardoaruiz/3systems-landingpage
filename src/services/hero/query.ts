@@ -3,5 +3,7 @@ export const HERO_QUERY = `*[_type == "hero"]{
   description,
   "logo": logo.asset->{
     url,
+    title,
+    altText
   }
 }`;

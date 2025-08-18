@@ -22,7 +22,7 @@ export function HeroView({
       {logo && (
         <div className="relative size-[140px] md:size-[320px]">
           <Image
-            alt="Logo"
+            alt={logo.altText}
             fill
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
             src={logo.url}
