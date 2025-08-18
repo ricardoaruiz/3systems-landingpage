@@ -18,6 +18,7 @@ export function SectionContactView({
   return (
     <Section.Container
       className={cn('bg-zinc-200', className)}
+      id={data.id}
       style={{
         ...disclamerBackgroundColorStyle,
         ...disclamerTextColorStyle,
