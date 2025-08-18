@@ -10,6 +10,7 @@ export function SectionContentView({
   className,
   ...props
 }: SectionContentProps) {
+  const hasSideContent = !!data.sideContent;
   const backgroundStyle = data.color ? { backgroundColor: data.color.hex } : {};
   const textColorStyle = data.textColor ? { color: data.textColor.hex } : {};
   return (
@@ -17,9 +18,8 @@ export function SectionContentView({
       className={cn('scroll-mt-15 lg:pb-4 ', className)}
       {...props}
     >
-      {/* <Section.Header className="flex flex-col items-center justify-center gap-4 bg-tertiary-cristallo"> */}
       <Section.Header
-        className="flex flex-col items-center justify-center gap-4"
+        className={cn('flex flex-col items-center justify-center gap-4')}
         style={{ ...backgroundStyle, ...textColorStyle }}
       >
         <Section.Title>{data.subject}</Section.Title>
@@ -28,7 +28,11 @@ export function SectionContentView({
       </Section.Header>
 
       <Section.Body className="flex flex-col gap-3 md:flex-row md:gap-6">
-        <div className="flex w-full flex-2/3 flex-col gap-3 ">
+        <div
+          className={cn('flex w-full flex-2/3 flex-col gap-3', {
+            'lg:grid lg:grid-cols-2 lg:gap-6': !hasSideContent,
+          })}
+        >
           {data.cards.map(({ slug, subject, ...rest }) => (
             <CardContent
               data-aos="fade-right"
@@ -39,7 +43,7 @@ export function SectionContentView({
           ))}
         </div>
 
-        {data.sideContent && (
+        {hasSideContent && (
           <SideContent.Container
             alt="Sala com vária pessoas assistindo uma palestra"
             data-aos="fade-left"
