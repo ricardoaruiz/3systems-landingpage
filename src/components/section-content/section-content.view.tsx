@@ -44,14 +44,19 @@ export function SectionContentView({
             'lg:grid lg:grid-cols-2 lg:gap-6': !hasSideContent,
           })}
         >
-          {data.cards.map(({ slug, subject, ...rest }) => (
-            <CardContent
-              data-aos="fade-right"
-              key={slug}
-              title={subject}
-              {...rest}
-            />
-          ))}
+          {data.cards.map(({ slug, subject, ...rest }, index) => {
+            const showLeftAnimation = !hasSideContent && index % 2 !== 0;
+            const dataAos = showLeftAnimation ? 'fade-left' : 'fade-right';
+
+            return (
+              <CardContent
+                data-aos={dataAos}
+                key={slug}
+                title={subject}
+                {...rest}
+              />
+            );
+          })}
         </div>
 
         {hasSideContent && (
