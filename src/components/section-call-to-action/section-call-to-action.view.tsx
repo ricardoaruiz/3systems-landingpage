@@ -1,22 +1,39 @@
 import Image from 'next/image';
-import cinthyaDedinho from '../../../public/images/cinthya_dedinho.webp';
 import { Section } from '../section';
+import type { SectionCallToActionProps } from './section-call-to-action.types';
 
-export function SectionCallToActionView() {
+export function SectionCallToActionView({
+  id,
+  mainImage,
+  backgroundImage,
+  mainText,
+  color,
+  textColor,
+  ...props
+}: SectionCallToActionProps) {
+  const backgroundStyle = color ? { backgroundColor: color.hex } : {};
+  const textColorStyle = textColor ? { color: textColor.hex } : {};
+
   return (
-    <Section.Container backgroundImage="images/fundo_verde.webp">
+    <Section.Container
+      backgroundImage={backgroundImage.url}
+      className="text-zinc-50"
+      id={id}
+      style={{ ...backgroundStyle, ...textColorStyle }}
+      {...props}
+    >
       <Section.Body className="flex flex-col items-center justify-center p-4 pb-0 md:gap-8 md:p-8 md:pb-0">
-        <p className="w-full max-w-96 text-center font-bold text-xl/relaxed text-zinc-50 md:max-w-[690px] md:text-4xl">
-          Descubra como podemos transformar sua empresa!
+        <p className="w-full max-w-96 text-center font-bold text-xl/relaxed md:max-w-[690px] md:text-4xl">
+          {mainText}
         </p>
 
         <div className="relative h-[296px] w-[198px] md:h-[537px] md:w-[358px]">
           <Image
-            alt="Transformação da Empresa"
+            alt={mainImage.altText}
             fill
             quality={100}
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            src={cinthyaDedinho}
+            src={mainImage.url}
           />
         </div>
       </Section.Body>
