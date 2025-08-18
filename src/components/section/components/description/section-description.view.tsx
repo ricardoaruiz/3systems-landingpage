@@ -9,7 +9,7 @@ export function SectionDescriptionView({
   return (
     <p
       className={cn(
-        'text-center font-bold text-base/snug text-zinc-50 md:max-w-[1200px] md:text-4xl/snug',
+        'text-center font-bold text-base/snug md:max-w-[1200px] md:text-4xl/snug',
         className
       )}
       {...props}
