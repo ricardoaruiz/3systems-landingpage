@@ -5,15 +5,17 @@ import { SectionCallToAction } from '@/components/section-call-to-action';
 import { SectionContact } from '@/components/section-contact';
 import { SectionContent } from '@/components/section-content';
 import { getHero } from '@/services';
+import { getMenu } from '@/services/menu/fetcher';
 import { getSections } from '@/services/section';
 
 export default async function Home() {
+  const menuData = await getMenu();
   const heroData = await getHero();
   const sectionsData = await getSections();
 
   return (
     <main>
-      <Header />
+      <Header menu={menuData} />
       <Hero {...heroData} />
       <SectionCallToAction />
       {sectionsData.map((section) => {
