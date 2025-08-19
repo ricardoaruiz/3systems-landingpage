@@ -1,7 +1,5 @@
 import type { MetadataRoute } from 'next';
-
-const DOMAIN_URL =
-  process.env.DOMAIN_URL || 'https://cristallo-landing-page.vercel.app/';
+import { DOMAIN_URL } from '@/constants';
 
 export default function robots(): MetadataRoute.Robots {
   return {

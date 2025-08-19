@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import { DOMAIN_URL } from '@/constants';
 
 interface GenerateMetadataParams {
   title?: string;
@@ -7,9 +8,6 @@ interface GenerateMetadataParams {
   url?: string;
   keywords?: string[];
 }
-
-const DOMAIN_URL =
-  process.env.DOMAIN_URL || 'https://cristallo-landing-page.vercel.app/';
 
 export function generateMetadata({
   title = 'Cristallo Soluções e Serviços Empresariais',
