@@ -9,7 +9,6 @@ export function AosConfig() {
       offset: 100,
       duration: 400,
       easing: 'ease-in-sine',
-      disable: 'mobile',
     });
   }, []);
 
