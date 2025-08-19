@@ -19,9 +19,9 @@ export function HeaderView({ menu, className, ...props }: HeaderProps) {
   return (
     <header
       className={cn(
-        'sticky top-0 z-50 hidden h-15 bg-zinc-300/20 opacity-100 shadow-md transition-all duration-300 lg:block',
+        'fixed top-0 z-50 hidden h-15 w-full bg-zinc-300/20 opacity-100 shadow-md transition-all duration-300 lg:block',
         {
-          'h-0 opacity-0': !isOnTop,
+          'h-1 opacity-0': !isOnTop,
         },
         className
       )}
