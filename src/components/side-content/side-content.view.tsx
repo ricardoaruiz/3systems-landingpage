@@ -4,12 +4,16 @@ import { cn } from '@/lib/utils';
 import type { SideContentProps } from './side-content.types';
 
 export function SideContentView({
+  isVisible,
   image,
   alt,
   className,
   children,
   ...props
 }: SideContentProps) {
+  if (!isVisible) {
+    return null;
+  }
   return (
     <aside
       className={cn('hidden flex-1/3 md:flex md:flex-col', className)}

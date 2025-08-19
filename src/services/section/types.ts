@@ -1,4 +1,4 @@
-import type { Color, Image } from '../types';
+import type { Card, Color, Image } from '../types';
 
 export type Section = {
   id: string;
@@ -6,17 +6,9 @@ export type Section = {
   subject: string;
   color: Color;
   textColor: Color;
-  description: string;
+  description?: string;
   cards: Card[];
-  sideContent: SideContent;
-};
-
-type Card = {
-  slug: string;
-  subject: string;
-  description: string;
-  hideBorderMobile: boolean;
-  hideBorderDesktop: boolean;
+  sideContent?: SideContent;
 };
 
 type SideContent = {

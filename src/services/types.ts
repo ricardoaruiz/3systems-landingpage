@@ -13,3 +13,11 @@ export type Image = {
 export type Color = {
   hex: string;
 };
+
+export type Card = {
+  slug: string;
+  subject: string;
+  description: string;
+  hideBorderMobile: boolean;
+  hideBorderDesktop: boolean;
+};

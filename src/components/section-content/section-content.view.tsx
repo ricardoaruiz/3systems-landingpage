@@ -1,8 +1,8 @@
 import Markdown from 'react-markdown';
 import { cn } from '@/lib/utils';
-import { CardContent } from '../card-content';
 import { Section } from '../section';
 import { SideContent } from '../side-content';
+import { Cards } from './components/cards';
 import type { SectionContentProps } from './section-content.types';
 
 export function SectionContentView({
@@ -39,39 +39,20 @@ export function SectionContentView({
       </Section.Header>
 
       <Section.Body className="flex flex-col gap-3 md:flex-row md:gap-6">
-        <div
-          className={cn('flex w-full flex-2/3 flex-col gap-3', {
-            'lg:grid lg:grid-cols-2 lg:gap-6': !hasSideContent,
-          })}
+        <Cards data={data.cards} hasSideContent={hasSideContent} />
+
+        <SideContent.Container
+          alt={data.sideContent?.image.altText}
+          data-aos="fade-left"
+          image={data.sideContent?.image.url}
+          isVisible={hasSideContent}
         >
-          {data.cards.map(({ slug, subject, ...rest }, index) => {
-            const showLeftAnimation = !hasSideContent && index % 2 !== 0;
-            const dataAos = showLeftAnimation ? 'fade-left' : 'fade-right';
-
-            return (
-              <CardContent
-                data-aos={dataAos}
-                key={slug}
-                title={subject}
-                {...rest}
-              />
-            );
-          })}
-        </div>
-
-        {hasSideContent && (
-          <SideContent.Container
-            alt={data.sideContent.image.altText}
-            data-aos="fade-left"
-            image={data.sideContent.image.url}
+          <SideContent.Content
+            style={{ ...backgroundStyle, ...textColorStyle }}
           >
-            <SideContent.Content
-              style={{ ...backgroundStyle, ...textColorStyle }}
-            >
-              <Markdown>{data.sideContent.description}</Markdown>
-            </SideContent.Content>
-          </SideContent.Container>
-        )}
+            <Markdown>{data.sideContent?.description}</Markdown>
+          </SideContent.Content>
+        </SideContent.Container>
       </Section.Body>
     </Section.Container>
   );
