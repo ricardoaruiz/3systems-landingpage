@@ -66,9 +66,14 @@ export function SectionContactView({
                 width={data.contactEmailImage.metadata.dimensions.width}
               />
 
-              <p className="text-center font-semibold text-xl/relaxed ">
+              <a
+                className="text-center font-semibold text-xl/relaxed hover:text-secondary-cristallo hover:underline"
+                href={data.contactEmailHref || '#'}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {data.contactEmail}
-              </p>
+              </a>
             </div>
             <div className="flex justify-center gap-2 text-primary-cristallo md:items-center md:justify-start">
               <Image
@@ -78,9 +83,14 @@ export function SectionContactView({
                 src={data.contactPhoneImage.url}
                 width={data.contactPhoneImage.metadata.dimensions.width}
               />
-              <p className="text-center font-semibold text-base/relaxed text-primary-cristallo ">
+              <a
+                className="text-center font-semibold text-base/relaxed text-primary-cristallo hover:text-secondary-cristallo hover:underline"
+                href={data.contactPhoneHref || '#'}
+                rel="noopener noreferrer"
+                target="_blank"
+              >
                 {data.contactPhone}
-              </p>
+              </a>
             </div>
           </div>
 

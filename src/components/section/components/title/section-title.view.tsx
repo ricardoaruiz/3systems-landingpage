@@ -9,7 +9,7 @@ export function SectionTitleView({
   return (
     <h2
       className={cn(
-        'text-center font-bold text-xl/snug md:max-w-[1000px] md:text-5xl/snug',
+        'text-center font-bold text-2xl/snug md:max-w-[1000px] md:text-5xl/snug',
         className
       )}
       {...props}

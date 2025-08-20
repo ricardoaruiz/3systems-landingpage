@@ -9,7 +9,9 @@ export type Contact = {
   contactName: string;
   contactEmailImage: Image;
   contactEmail: string;
+  contactEmailHref?: string;
   contactPhoneImage: Image;
   contactPhone: string;
+  contactPhoneHref?: string;
   rightImage: Image;
 };

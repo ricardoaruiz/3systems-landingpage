@@ -22,12 +22,14 @@ export function CardContentView({
     >
       <CardContent>
         <div className="flex items-baseline gap-2">
-          <div className="size-6 pt-1">
+          <div className="size-6 pt-[5px]">
             <CircleCheckIcon className="text-green-600" />
           </div>
-          <div className="flex flex-col gap-4">
-            <p className="font-bold text-xl/relaxed">{title}</p>
-            <p className="text-base/relaxed">{description}</p>
+          <div className="flex flex-col justify-center gap-4">
+            <p className="font-bold text-lg/relaxed lg:text-xl/relaxed">
+              {title}
+            </p>
+            <p className="text-base/relaxed lg:text-lg">{description}</p>
           </div>
         </div>
       </CardContent>

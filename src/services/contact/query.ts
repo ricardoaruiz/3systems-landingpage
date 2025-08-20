@@ -31,6 +31,7 @@ export const CONTACT_QUERY = `*[_type == "contact"]{
     }
   },
   contactEmail,
+  contactEmailHref,
   "contactPhoneImage": contactPhoneImage.asset->{
     url,
     title,
@@ -43,6 +44,7 @@ export const CONTACT_QUERY = `*[_type == "contact"]{
     }
   },
   contactPhone,
+  contactPhoneHref,
   "rightImage": rightImage.asset->{
     url,
     title,

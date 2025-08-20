@@ -23,7 +23,7 @@ export function SectionCallToActionView({
       {...props}
     >
       <Section.Body className="flex flex-col items-center justify-center p-4 pb-0 md:gap-8 md:p-8 md:pb-0">
-        <p className="w-full max-w-96 text-center font-bold text-xl/relaxed md:max-w-[690px] md:text-4xl">
+        <p className="w-full max-w-96 text-center font-bold text-2xl/relaxed md:max-w-[690px] md:text-5xl/relaxed lg:max-w-[900px]">
           {mainText}
         </p>
 
