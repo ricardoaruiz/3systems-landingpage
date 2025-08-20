@@ -20,10 +20,7 @@ export function SectionContentView({
     : {};
 
   return (
-    <Section.Container
-      className={cn('scroll-mt-15 lg:pb-4 ', className)}
-      {...props}
-    >
+    <Section.Container className={cn('lg:pb-4 ', className)} {...props}>
       <Section.Header
         className={cn('flex flex-col items-center justify-center gap-4')}
         style={{ ...backgroundStyle, ...textColorStyle }}
