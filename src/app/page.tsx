@@ -4,6 +4,7 @@ import { Hero } from '@/components/hero';
 import { SectionCallToAction } from '@/components/section-call-to-action';
 import { SectionContact } from '@/components/section-contact';
 import { SectionContent } from '@/components/section-content';
+import { WhatsAppButtonView } from '@/components/whatsapp-button/whatsapp-button.view';
 import { getHero } from '@/services';
 import { getCallToAction } from '@/services/call-to-actiion';
 import { getContact } from '@/services/contact/fetcher';
@@ -20,19 +21,15 @@ export default async function Home() {
   return (
     <main>
       <Header menu={menuData} />
-
       <Hero {...heroData} />
-
       <SectionCallToAction {...callToActionData} />
-
       {sectionsData.map((section) => {
         return (
           <SectionContent data={section} id={section.id} key={section.slug} />
         );
       })}
-
       <SectionContact data={contactData} />
-
+      <WhatsAppButtonView href={contactData.contactPhoneHref} />
       <GoToTopButtonView />
     </main>
   );
