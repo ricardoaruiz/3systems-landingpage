@@ -15,6 +15,7 @@ export function GoToTopButtonView() {
       <Tooltip>
         <TooltipTrigger asChild>
           <button
+            aria-label="voltar ao topo da página"
             className="flex size-12 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-secondary-cristallo p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-cristallo md:size-16"
             onClick={() => {
               window.scrollTo(0, 0);
