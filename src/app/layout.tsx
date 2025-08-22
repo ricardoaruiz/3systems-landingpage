@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import { AOS } from '@/components/aos';
 import { StructuredData } from '@/components/structured-data';
-import { DOMAIN_URL } from '@/constants';
 import { generateMetadata } from '@/lib/metadata';
 
 const geistSans = Geist({
@@ -74,14 +73,14 @@ export default function RootLayout({
         <link href="/favicon.ico" rel="shortcut icon" />
 
         <meta content="summary" name="twitter:card" />
-        <meta content={DOMAIN_URL} name="twitter:url" />
+        <meta content="https://cristallo.com.br" name="twitter:url" />
         <meta content="Cristallo Empresarial" name="twitter:title" />
         <meta
           content="Cristallo Empresarial - Soluções empresariais de qualidade"
           name="twitter:description"
         />
         <meta
-          content={`${DOMAIN_URL}/icons/icon-192x192.png`}
+          content="https://cristallo.com.br/icons/icon-192x192.png"
           name="twitter:image"
         />
         <meta content="@cristallo" name="twitter:creator" />
@@ -92,9 +91,9 @@ export default function RootLayout({
           property="og:description"
         />
         <meta content="Cristallo Empresarial" property="og:site_name" />
-        <meta content={DOMAIN_URL} property="og:url" />
+        <meta content="https://cristallo.com.br" property="og:url" />
         <meta
-          content={`${DOMAIN_URL}/icons/icon-192x192.png`}
+          content="https://cristallo.com.br/icons/icon-192x192.png"
           property="og:image"
         />
       </head>
