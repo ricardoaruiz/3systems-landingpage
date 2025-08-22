@@ -6,6 +6,7 @@ export function HeroView({
   title,
   description,
   logo,
+  backgroundImage,
   className,
   ...props
 }: HeroProps) {
@@ -14,9 +15,14 @@ export function HeroView({
       className={cn(
         'flex flex-col items-center gap-4 p-4',
         'lg:h-screen lg:justify-center lg:gap-8 lg:px-2',
-        "bg-[url('/images/fundo_banner.webp')] bg-center bg-cover bg-no-repeat",
         className
       )}
+      style={{
+        backgroundImage: `url(${backgroundImage?.url})`,
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+        backgroundRepeat: 'no-repeat',
+      }}
       {...props}
     >
       {logo && (

@@ -5,5 +5,10 @@ export const HERO_QUERY = `*[_type == "hero"]{
     url,
     title,
     altText
+  },
+  "backgroundImage": backgroundImage.asset->{
+    url,
+    title,
+    altText
   }
 }`;
