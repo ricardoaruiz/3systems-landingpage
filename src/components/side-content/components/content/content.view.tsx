@@ -5,7 +5,7 @@ export function ContentView({ children, className, ...props }: ContentProps) {
   return (
     <div
       className={cn(
-        'flex-1 space-y-4 bg-primary-cristallo p-4 text-center font-bold text-xl/relaxed text-zinc-50 shadow-md',
+        'flex flex-1 flex-col justify-center space-y-8 bg-primary-cristallo p-4 text-center font-bold text-2xl/relaxed text-zinc-50 shadow-md',
         className
       )}
       {...props}

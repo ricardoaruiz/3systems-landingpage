@@ -16,7 +16,7 @@ export function SectionContentView({
   const backgroundStyle = data.color ? { backgroundColor: data.color.hex } : {};
   const textColorStyle = data.textColor ? { color: data.textColor.hex } : {};
   const separatorColorStyle = data.textColor
-    ? { backgroundColor: data.textColor.hex }
+    ? { borderColor: data.textColor.hex }
     : {};
 
   return (
@@ -25,11 +25,16 @@ export function SectionContentView({
         className={cn('flex flex-col items-center justify-center gap-4')}
         style={{ ...backgroundStyle, ...textColorStyle }}
       >
-        <Section.Title>{data.subject}</Section.Title>
+        <Section.Title
+          noBorder={!hasDescription}
+          style={{ ...separatorColorStyle }}
+        >
+          {data.subject}
+        </Section.Title>
 
         {hasDescription && (
           <>
-            <Section.Separator style={{ ...separatorColorStyle }} />
+            {/* <Section.Separator style={{ ...separatorColorStyle }} /> */}
             <Section.Description>{data.description}</Section.Description>
           </>
         )}
