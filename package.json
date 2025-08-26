@@ -22,6 +22,7 @@
     }
   },
   "dependencies": {
+    "@next/third-parties": "^15.5.2",
     "@radix-ui/react-tooltip": "^1.2.8",
     "aos": "^2.3.4",
     "class-variance-authority": "^0.7.1",

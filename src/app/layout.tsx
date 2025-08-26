@@ -1,6 +1,8 @@
+/** biome-ignore-all lint/style/noNonNullAssertion: <explanation> */
 import type { Metadata } from 'next';
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { AOS } from '@/components/aos';
 import { StructuredData } from '@/components/structured-data';
 import { generateMetadata } from '@/lib/metadata';
@@ -31,6 +33,7 @@ export default function RootLayout({
         <StructuredData />
         <AOS />
       </body>
+      <GoogleAnalytics gaId={process.env.GOOGLE_ANALYTICS_ID!} />
     </html>
   );
 }
