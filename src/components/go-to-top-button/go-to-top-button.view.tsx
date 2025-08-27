@@ -8,8 +8,14 @@ export function GoToTopButtonView() {
   const { isOnTop } = useScroll();
 
   const handleButtonClick = () => {
-    window.location.href = '/';
-    window.scrollTo(0, 0);
+    if (window.location.hash) {
+      history.replaceState(
+        null,
+        '',
+        window.location.pathname + window.location.search
+      );
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   return (
