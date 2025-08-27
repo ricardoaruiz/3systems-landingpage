@@ -1,10 +1,15 @@
+'use client';
+
 import Link from 'next/link';
+import { cn } from '@/lib/utils';
 import type { NavLinkProps } from './nav-link.types';
 
 export function NavLinkView(props: NavLinkProps) {
   return (
     <Link
-      className="cursor-pointer font-semibold text-primary-cristallo text-xl transition-all hover:text-secondary-cristallo"
+      className={cn(
+        'cursor-pointer font-semibold text-xl text-zinc-100 transition-all hover:text-primary-cristallo'
+      )}
       {...props}
     />
   );
