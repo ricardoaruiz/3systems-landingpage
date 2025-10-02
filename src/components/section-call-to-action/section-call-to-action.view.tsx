@@ -16,7 +16,7 @@ export function SectionCallToActionView({
 
   return (
     <Section.Container
-      backgroundImage={backgroundImage.url}
+      backgroundImage={backgroundImage?.url}
       className="text-zinc-50"
       id={id}
       style={{ ...backgroundStyle, ...textColorStyle }}
@@ -27,15 +27,17 @@ export function SectionCallToActionView({
           {mainText}
         </p>
 
-        <div className="relative h-[296px] w-[198px] md:h-[537px] md:w-[358px]">
-          <Image
-            alt={mainImage.altText}
-            fill
-            quality={100}
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-            src={mainImage.url}
-          />
-        </div>
+        {mainImage && (
+          <div className="relative h-[296px] w-[198px] md:h-[537px] md:w-[358px]">
+            <Image
+              alt={mainImage.altText}
+              fill
+              quality={100}
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+              src={mainImage.url}
+            />
+          </div>
+        )}
       </Section.Body>
     </Section.Container>
   );

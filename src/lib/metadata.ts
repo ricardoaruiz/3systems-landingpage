@@ -10,15 +10,11 @@ interface GenerateMetadataParams {
 }
 
 export function generateMetadata({
-  title = 'Cristallo Soluções e Serviços Empresariais',
-  description = 'Transforme seu negócio com nossas soluções empresariais completas. Consultoria, gestão e serviços especializados para impulsionar sua empresa.',
+  title = '3 Systems - Gestão Ambiental',
+  description = 'Soluções ambientais para o seu negócio',
   image = '/images/logo_300.webp',
   url = '/',
-  keywords = [
-    'soluções empresariais',
-    'consultoria empresarial',
-    'gestão empresarial',
-  ],
+  keywords = ['gestão ambiental', 'consultoria ambiental'],
 }: GenerateMetadataParams = {}): Metadata {
   const baseUrl = DOMAIN_URL;
   const fullUrl = `${baseUrl}${url}`;
@@ -28,9 +24,9 @@ export function generateMetadata({
     title,
     description,
     keywords,
-    authors: [{ name: 'Cristallo Soluções Empresariais' }],
-    creator: 'Cristallo Soluções Empresariais',
-    publisher: 'Cristallo Soluções Empresariais',
+    authors: [{ name: '3 Systems - Gestão Ambiental' }],
+    creator: '3 Systems - Gestão Ambiental',
+    publisher: '3 Systems - Gestão Ambiental',
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: url,
@@ -39,7 +35,7 @@ export function generateMetadata({
       type: 'website',
       locale: 'pt_BR',
       url: fullUrl,
-      siteName: 'Cristallo Soluções e Serviços Empresariais',
+      siteName: '3 Systems - Gestão Ambiental',
       title,
       description,
       images: [
@@ -81,7 +77,7 @@ export function generateJsonLd() {
   return {
     '@context': 'https://schema.org',
     '@type': 'Organization',
-    name: 'Cristallo Soluções e Serviços Empresariais',
+    name: '3 Systems - Gestão Ambiental',
     description:
       'Transforme seu negócio com nossas soluções empresariais completas. Consultoria, gestão e serviços especializados para impulsionar sua empresa.',
     url: `${DOMAIN_URL}`, // Substitua pela URL real

@@ -8,7 +8,7 @@ export function NavLinkView(props: NavLinkProps) {
   return (
     <Link
       className={cn(
-        'cursor-pointer font-semibold text-xl text-zinc-100 transition-all hover:text-primary-cristallo'
+        'cursor-pointer font-semibold text-xl text-zinc-100 transition-all hover:text-primary-3-3systems'
       )}
       {...props}
     />

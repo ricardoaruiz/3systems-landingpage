@@ -5,9 +5,14 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme inline {
-  --color-primary-cristallo: var(--primary-cristallo);
-  --color-secondary-cristallo: var(--secondary-cristallo);
-  --color-tertiary-cristallo: var(--tertiary-cristallo);
+  --color-primary-3systems: var(--primary-3systems);
+  --color-primary-2-3systems: var(--primary-2-3systems);
+  --color-primary-3-3systems: var(--primary-3-3systems);
+  --color-secondary-3systems: var(--secondary-3systems);
+  --color-tertiary-3systems: var(--tertiary-3systems);
+  --color-gray-3systems: var(--gray-3systems);
+  --color-black-3systems: var(--black-3systems);
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
@@ -48,9 +53,14 @@
 }
 
 :root {
-  --primary-cristallo: #00687A;
-  --secondary-cristallo: #529CA2;
-  --tertiary-cristallo: #FFBD59;
+  --primary-3systems: #2C8C4A;
+  --primary-2-3systems: #4CAF50;
+  --primary-3-3systems: #6CCB6F;
+  --secondary-3systems: #7B4B2A;
+  --tertiary-3systems: #2E6DB4;
+  --gray-3systems: #A0A0A0;
+  --black-3systems: #000000;
+
   --radius: 0.625rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.141 0.005 285.823);
@@ -86,9 +96,14 @@
 }
 
 .dark {
-  --primary-cristallo: #00687A;
-  --secondary-cristallo: #529CA2;
-  --tertiary-cristallo: #FFBD59;
+  --primary-3systems: #2C8C4A;
+  --primary-2-3systems: #4CAF50;
+  --primary-3-3systems: #6CCB6F;
+  --secondary-3systems: #7B4B2A;
+  --tertiary-3systems: #2E6DB4;
+  --gray-3systems: #A0A0A0;
+  --black-3systems: #000000;
+
   --background: oklch(0.141 0.005 285.823);
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.21 0.006 285.885);

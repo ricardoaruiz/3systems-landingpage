@@ -211,7 +211,7 @@ export const metadata = generateMetadata({
   title: 'Sobre a Cristallo - Nossa História',
   description: 'Conheça a história da Cristallo e como ajudamos empresas a crescer.',
   url: '/sobre',
-  image: '/images/equipe-cristallo.webp',
+  image: '/images/equipe-3systems.webp',
 });
 ```
 
