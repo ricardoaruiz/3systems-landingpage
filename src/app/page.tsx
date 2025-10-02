@@ -22,14 +22,16 @@ export default async function Home() {
     <main>
       <Header menu={menuData} />
       <Hero {...heroData} />
-      <SectionCallToAction {...callToActionData} />
+
+      {callToActionData && <SectionCallToAction {...callToActionData} />}
+
       {sectionsData.map((section) => {
         return (
           <SectionContent data={section} id={section.id} key={section.slug} />
         );
       })}
       <SectionContact data={contactData} />
-      <WhatsAppButtonView href={contactData.contactPhoneHref} />
+      <WhatsAppButtonView href={contactData?.contactPhoneHref} />
       <GoToTopButtonView />
     </main>
   );

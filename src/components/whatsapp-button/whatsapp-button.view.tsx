@@ -10,6 +10,10 @@ export function WhatsAppButtonView({
   className,
   ...props
 }: WhatsAppButtonViewProps) {
+  if (!props.href) {
+    return null;
+  }
+
   return (
     <div className="fixed right-4 bottom-20 z-50 lg:bottom-24">
       <Tooltip>
@@ -18,7 +22,7 @@ export function WhatsAppButtonView({
             <div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-zinc-400 opacity-40" />
             <a
               className={cn(
-                'relative inline-flex size-12 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-secondary-cristallo p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-cristallo md:size-16',
+                'relative inline-flex size-12 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-primary-3systems p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-1-3systems md:size-16',
                 className
               )}
               rel="noopener noreferrer"
