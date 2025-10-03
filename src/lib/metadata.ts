@@ -67,7 +67,7 @@ export function generateMetadata({
       },
     },
     verification: {
-      // google: 'seu-codigo-de-verificacao-aqui', // Adicione quando configurar o Google Search Console
+      // google: process.env.GOOGLE_SEARCH_CONSOLE_VERIFICATION_ID, // Adicione quando configurar o Google Search Console
     },
   };
 }
