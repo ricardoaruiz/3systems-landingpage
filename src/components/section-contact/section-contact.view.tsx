@@ -58,7 +58,7 @@ export function SectionContactView({
 
           {/* Contact Information */}
           <div className="lg:-mt-12 space-y-3" data-aos="fade-right">
-            <p className="text-center font-semibold text-2xl/relaxed text-primary-3systems lg:text-left">
+            <p className="mt-0 text-center font-semibold text-2xl/relaxed text-primary-3systems lg:mt-15 lg:text-left">
               {data.contactName}
             </p>
             <div className="flex justify-center gap-2 text-primary-3systems md:items-center md:justify-start">

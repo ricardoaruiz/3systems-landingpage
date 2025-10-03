@@ -49,8 +49,8 @@ export function generateMetadata({
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@cristallo', // Substitua pelo handle do Twitter se houver
-      creator: '@cristallo',
+      site: '@3systems',
+      creator: '@3systems',
       title,
       description,
       images: [fullImageUrl],
@@ -80,13 +80,11 @@ export function generateJsonLd() {
     name: '3 Systems - Gestão Ambiental',
     description:
       'Transforme seu negócio com nossas soluções empresariais completas. Consultoria, gestão e serviços especializados para impulsionar sua empresa.',
-    url: `${DOMAIN_URL}`, // Substitua pela URL real
-    logo: `${DOMAIN_URL}/images/logo_300.svg`, // Substitua pela URL real
+    url: `${DOMAIN_URL}`,
+    logo: `${DOMAIN_URL}/images/logo_300.svg`,
     sameAs: [
       // Adicione os links das redes sociais se houver
-      // 'https://www.linkedin.com/company/cristallo',
-      // 'https://www.instagram.com/cristallo',
-      // 'https://twitter.com/cristallo',
+      'https://www.linkedin.com/in/angela-machado-bb789330/',
     ],
     contactPoint: {
       '@type': 'ContactPoint',
