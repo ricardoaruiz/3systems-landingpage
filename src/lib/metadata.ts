@@ -12,7 +12,7 @@ interface GenerateMetadataParams {
 export function generateMetadata({
   title = '3 Systems - Gestão Ambiental',
   description = 'Soluções ambientais para o seu negócio',
-  image = '/images/logo_300.webp',
+  image = 'images/logo_300.webp',
   url = '/',
   keywords = ['gestão ambiental', 'consultoria ambiental'],
 }: GenerateMetadataParams = {}): Metadata {
