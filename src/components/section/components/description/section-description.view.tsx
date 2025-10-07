@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils';
-import type { SectionDescriptionProps } from './section-description.types';
+import { cn } from "@/lib/utils";
+import type { SectionDescriptionProps } from "./section-description.types";
 
 export function SectionDescriptionView({
   children,
@@ -9,7 +9,7 @@ export function SectionDescriptionView({
   return (
     <p
       className={cn(
-        'text-center font-bold text-lg/relaxed md:max-w-[1200px] md:text-4xl/relaxed',
+        "text-center font-bold text-lg/relaxed md:max-w-[1200px] md:text-4xl/relaxed",
         className
       )}
       {...props}

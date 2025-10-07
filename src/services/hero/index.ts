@@ -1,2 +1,2 @@
-export { getHero } from './fetcher';
-export type { Hero } from './types';
+export { getHero } from "./fetcher";
+export type { Hero } from "./types";

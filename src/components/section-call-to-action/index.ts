@@ -1,1 +1,1 @@
-export { SectionCallToActionView as SectionCallToAction } from './section-call-to-action.view';
+export { SectionCallToActionView as SectionCallToAction } from "./section-call-to-action.view";

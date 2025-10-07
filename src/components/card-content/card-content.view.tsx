@@ -1,7 +1,7 @@
-import { CircleCheckIcon } from 'lucide-react';
-import { cn } from '@/lib/utils';
-import { Card, CardContent } from '../ui/card';
-import type { CardContentProps } from './card-content.types';
+import { CircleCheckIcon } from "lucide-react";
+import { cn } from "@/lib/utils";
+import { Card, CardContent } from "../ui/card";
+import type { CardContentProps } from "./card-content.types";
 
 export function CardContentView({
   className,
@@ -14,8 +14,8 @@ export function CardContentView({
   return (
     <Card
       className={cn(
-        { 'md:border-0 md:shadow-none': hideBorderDesktop },
-        { 'border-0 shadow-none': hideBorderMobile },
+        { "md:border-0 md:shadow-none": hideBorderDesktop },
+        { "border-0 shadow-none": hideBorderMobile },
         className
       )}
       {...props}
@@ -27,8 +27,8 @@ export function CardContentView({
           </div>
           <div className="flex flex-col justify-center gap-4">
             <p
-              className={cn('font-bold text-lg/relaxed lg:text-xl/relaxed', {
-                'font-normal': !description,
+              className={cn("font-bold text-lg/relaxed lg:text-xl/relaxed", {
+                "font-normal": !description,
               })}
             >
               {title}

@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 // Breakpoints padrão do Tailwind CSS
 const TAILWIND_BREAKPOINTS = {
@@ -8,12 +8,12 @@ const TAILWIND_BREAKPOINTS = {
   md: 768,
   lg: 1024,
   xl: 1280,
-  '2xl': 1536,
+  "2xl": 1536,
 } as const;
 
 type BreakpointKey = keyof typeof TAILWIND_BREAKPOINTS;
 
-interface UseMediaQueryReturn {
+type UseMediaQueryReturn = {
   // Função para consultar breakpoints específicos
   matches: (query: string) => boolean;
 
@@ -38,11 +38,11 @@ interface UseMediaQueryReturn {
   isBelow2xl: boolean;
 
   // Breakpoint atual
-  currentBreakpoint: BreakpointKey | 'xs';
+  currentBreakpoint: BreakpointKey | "xs";
 
   // Largura atual da tela
   width: number;
-}
+};
 
 export const useMediaQuery = (): UseMediaQueryReturn => {
   const [width, setWidth] = useState(0);
@@ -50,34 +50,34 @@ export const useMediaQuery = (): UseMediaQueryReturn => {
 
   // Função para avaliar media queries
   const evaluateQuery = (query: string): boolean => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return false;
     }
     return window.matchMedia(query).matches;
   };
 
   // Função para obter o breakpoint atual
-  const getCurrentBreakpoint = (currentWidth: number): BreakpointKey | 'xs' => {
-    if (currentWidth >= TAILWIND_BREAKPOINTS['2xl']) {
-      return '2xl';
+  const getCurrentBreakpoint = (currentWidth: number): BreakpointKey | "xs" => {
+    if (currentWidth >= TAILWIND_BREAKPOINTS["2xl"]) {
+      return "2xl";
     }
     if (currentWidth >= TAILWIND_BREAKPOINTS.xl) {
-      return 'xl';
+      return "xl";
     }
     if (currentWidth >= TAILWIND_BREAKPOINTS.lg) {
-      return 'lg';
+      return "lg";
     }
     if (currentWidth >= TAILWIND_BREAKPOINTS.md) {
-      return 'md';
+      return "md";
     }
     if (currentWidth >= TAILWIND_BREAKPOINTS.sm) {
-      return 'sm';
+      return "sm";
     }
-    return 'xs';
+    return "xs";
   };
 
   useEffect(() => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return;
     }
 
@@ -89,9 +89,9 @@ export const useMediaQuery = (): UseMediaQueryReturn => {
     updateWidth();
 
     // Add resize listener
-    window.addEventListener('resize', updateWidth);
+    window.addEventListener("resize", updateWidth);
 
-    return () => window.removeEventListener('resize', updateWidth);
+    return () => window.removeEventListener("resize", updateWidth);
   }, []);
 
   // Calcular todos os breakpoints baseados na largura atual
@@ -99,25 +99,25 @@ export const useMediaQuery = (): UseMediaQueryReturn => {
   const isMd = width >= TAILWIND_BREAKPOINTS.md;
   const isLg = width >= TAILWIND_BREAKPOINTS.lg;
   const isXl = width >= TAILWIND_BREAKPOINTS.xl;
-  const is2xl = width >= TAILWIND_BREAKPOINTS['2xl'];
+  const is2xl = width >= TAILWIND_BREAKPOINTS["2xl"];
 
   const isAboveSm = width > TAILWIND_BREAKPOINTS.sm;
   const isAboveMd = width > TAILWIND_BREAKPOINTS.md;
   const isAboveLg = width > TAILWIND_BREAKPOINTS.lg;
   const isAboveXl = width > TAILWIND_BREAKPOINTS.xl;
-  const isAbove2xl = width > TAILWIND_BREAKPOINTS['2xl'];
+  const isAbove2xl = width > TAILWIND_BREAKPOINTS["2xl"];
 
   const isBelowSm = width < TAILWIND_BREAKPOINTS.sm;
   const isBelowMd = width < TAILWIND_BREAKPOINTS.md;
   const isBelowLg = width < TAILWIND_BREAKPOINTS.lg;
   const isBelowXl = width < TAILWIND_BREAKPOINTS.xl;
-  const isBelow2xl = width < TAILWIND_BREAKPOINTS['2xl'];
+  const isBelow2xl = width < TAILWIND_BREAKPOINTS["2xl"];
 
   const currentBreakpoint = getCurrentBreakpoint(width);
 
   // Função para fazer queries customizadas
   const matchesQuery = (query: string): boolean => {
-    if (typeof window === 'undefined') {
+    if (typeof window === "undefined") {
       return false;
     }
 

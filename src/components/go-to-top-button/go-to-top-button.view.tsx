@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { ChevronsUp } from 'lucide-react';
-import { useScroll } from '@/hooks/useScroll';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
+import { ChevronsUp } from "lucide-react";
+import { useScroll } from "@/hooks/useScroll";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export function GoToTopButtonView() {
   const { isOnTop } = useScroll();
@@ -11,17 +11,17 @@ export function GoToTopButtonView() {
     if (window.location.hash) {
       history.replaceState(
         null,
-        '',
+        "",
         window.location.pathname + window.location.search
       );
     }
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
     <div
       className="fixed right-4 bottom-4 z-50"
-      data-aos={isOnTop ? 'fade-left' : 'fade-right'}
+      data-aos={isOnTop ? "fade-left" : "fade-right"}
     >
       <Tooltip>
         <TooltipTrigger asChild>

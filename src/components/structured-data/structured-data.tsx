@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import Script from 'next/script';
-import { generateJsonLd } from '@/lib/metadata';
+import Script from "next/script";
+import { generateJsonLd } from "@/lib/metadata";
 
 export function StructuredData() {
   const jsonLd = generateJsonLd();

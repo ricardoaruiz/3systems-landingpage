@@ -1,1 +1,1 @@
-export { AosConfig as AOS } from './aos-config';
+export { AosConfig as AOS } from "./aos-config";

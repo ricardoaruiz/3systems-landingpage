@@ -1,1 +1,1 @@
-export { NavLinkView as NavLink } from './nav-link.view';
+export { NavLinkView as NavLink } from "./nav-link.view";

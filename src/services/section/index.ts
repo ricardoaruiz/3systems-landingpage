@@ -1,2 +1,2 @@
-export { getSections } from './fetcher';
-export type { Section } from './types';
+export { getSections } from "./fetcher";
+export type { Section } from "./types";

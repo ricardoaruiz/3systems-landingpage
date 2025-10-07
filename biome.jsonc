@@ -1,13 +1,17 @@
 {
-  "$schema": "https://biomejs.dev/schemas/2.1.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/2.2.5/schema.json",
   "extends": ["ultracite"],
   "files": {
-    "includes": ["src/**/*", "!**/node_modules/**", "!**/*.css"]
+    "includes": ["src/**/*", "!**/node_modules", "!**/*.css"]
   },
   "linter": {
     "rules": {
       "style": {
-        "useFilenamingConvention": "off"
+        "useFilenamingConvention": "off",
+        "noNonNullAssertion": "off"
+      },
+      "performance": {
+        "noBarrelFile": "off"
       }
     }
   }

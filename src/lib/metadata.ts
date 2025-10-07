@@ -1,22 +1,22 @@
-import type { Metadata } from 'next';
-import { DOMAIN_URL } from '@/constants';
+import type { Metadata } from "next";
+import { DOMAIN_URL } from "@/constants";
 
-interface GenerateMetadataParams {
+type GenerateMetadataParams = {
   title?: string;
   description?: string;
   image?: string;
   url?: string;
   keywords?: string[];
-}
+};
 
 export function generateMetadata({
-  title = '3 Systems - Gestão Ambiental',
-  description = 'Soluções ambientais para o seu negócio',
-  image = '/images/logo_300.webp',
-  url = '/',
-  keywords = ['gestão ambiental', 'consultoria ambiental'],
+  title = "3 Systems - Gestão Ambiental",
+  description = "Soluções ambientais para o seu negócio",
+  image = "/images/logo_300.webp",
+  url = "/",
+  keywords = ["gestão ambiental", "consultoria ambiental"],
 }: GenerateMetadataParams = {}): Metadata {
-  const domain = DOMAIN_URL.endsWith('/')
+  const domain = DOMAIN_URL.endsWith("/")
     ? DOMAIN_URL.slice(0, -1)
     : DOMAIN_URL;
 
@@ -28,18 +28,18 @@ export function generateMetadata({
     title,
     description,
     keywords,
-    authors: [{ name: '3 Systems - Gestão Ambiental' }],
-    creator: '3 Systems - Gestão Ambiental',
-    publisher: '3 Systems - Gestão Ambiental',
+    authors: [{ name: "3 Systems - Gestão Ambiental" }],
+    creator: "3 Systems - Gestão Ambiental",
+    publisher: "3 Systems - Gestão Ambiental",
     metadataBase: new URL(baseUrl),
     alternates: {
       canonical: url,
     },
     openGraph: {
-      type: 'website',
-      locale: 'pt_BR',
+      type: "website",
+      locale: "pt_BR",
       url: fullUrl,
-      siteName: '3 Systems - Gestão Ambiental',
+      siteName: "3 Systems - Gestão Ambiental",
       title,
       description,
       images: [
@@ -52,9 +52,9 @@ export function generateMetadata({
       ],
     },
     twitter: {
-      card: 'summary_large_image',
-      site: '@3systems',
-      creator: '@3systems',
+      card: "summary_large_image",
+      site: "@3systems",
+      creator: "@3systems",
       title,
       description,
       images: [fullImageUrl],
@@ -65,9 +65,9 @@ export function generateMetadata({
       googleBot: {
         index: true,
         follow: true,
-        'max-video-preview': -1,
-        'max-image-preview': 'large',
-        'max-snippet': -1,
+        "max-video-preview": -1,
+        "max-image-preview": "large",
+        "max-snippet": -1,
       },
     },
     verification: {
@@ -79,26 +79,26 @@ export function generateMetadata({
 // Função para gerar JSON-LD (structured data)
 export function generateJsonLd() {
   return {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: '3 Systems - Gestão Ambiental',
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "3 Systems - Gestão Ambiental",
     description:
-      'Transforme seu negócio com nossas soluções empresariais completas. Consultoria, gestão e serviços especializados para impulsionar sua empresa.',
+      "Transforme seu negócio com nossas soluções empresariais completas. Consultoria, gestão e serviços especializados para impulsionar sua empresa.",
     url: `${DOMAIN_URL}`,
     logo: `${DOMAIN_URL}/images/logo_300.svg`,
     sameAs: [
       // Adicione os links das redes sociais se houver
-      'https://www.linkedin.com/in/angela-machado-bb789330/',
+      "https://www.linkedin.com/in/angela-machado-bb789330/",
     ],
     contactPoint: {
-      '@type': 'ContactPoint',
-      contactType: 'customer service',
-      areaServed: 'BR',
-      availableLanguage: 'Portuguese',
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      areaServed: "BR",
+      availableLanguage: "Portuguese",
     },
     address: {
-      '@type': 'PostalAddress',
-      addressCountry: 'BR',
+      "@type": "PostalAddress",
+      addressCountry: "BR",
       // Adicione endereço completo se apropriado
     },
   };

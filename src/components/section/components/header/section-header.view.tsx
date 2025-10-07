@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils';
-import type { SectionHeaderProps } from './secrtion.header.types';
+import { cn } from "@/lib/utils";
+import type { SectionHeaderProps } from "./secrtion.header.types";
 
 export function SectionHeaderView({
   backgroundImage,
@@ -11,9 +11,9 @@ export function SectionHeaderView({
   const internalStyle = backgroundImage
     ? {
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         ...style,
       }
     : { ...style };
@@ -21,7 +21,7 @@ export function SectionHeaderView({
   return (
     <header
       className={cn(
-        'bg-primary-3systems p-4 text-zinc-100 shadow-lg md:p-8',
+        "bg-primary-3systems p-4 text-zinc-100 shadow-lg md:p-8",
         className
       )}
       style={internalStyle}

@@ -1,3 +1,3 @@
-import type { CallToAction } from '@/services/call-to-actiion';
+import type { CallToAction } from "@/services/call-to-actiion";
 
 export type SectionCallToActionProps = CallToAction;

@@ -18,31 +18,12 @@ export const CONTACT_QUERY = `*[_type == "contact"]{
       }
     }
   },
+  contactCompanyName,
+  contactCompanyNameLinkedinHref,
   contactName,
-  "contactEmailImage": contactEmailImage.asset->{
-    url,
-    title,
-    altText,
-    metadata {
-      dimensions {
-        width,
-        height
-      }
-    }
-  },
+  contactNameLinkedinHref,
   contactEmail,
   contactEmailHref,
-  "contactPhoneImage": contactPhoneImage.asset->{
-    url,
-    title,
-    altText,
-    metadata {
-      dimensions {
-        width,
-        height
-      }
-    }
-  },
   contactPhone,
   contactPhoneHref,
   "rightImage": rightImage.asset->{

@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import type { HeroProps } from './hero.types';
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import type { HeroProps } from "./hero.types";
 
 export function HeroView({
   title,
@@ -14,9 +14,9 @@ export function HeroView({
   const backgroundImageStyle = hasBackgroundImage
     ? {
         backgroundImage: `url(${backgroundImage.url})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
       }
     : undefined;
 
@@ -37,10 +37,10 @@ export function HeroView({
 
       <section
         className={cn(
-          'flex flex-col items-center gap-4 p-4',
-          'lg:h-screen lg:justify-center lg:gap-8 lg:px-2',
+          "flex flex-col items-center gap-4 p-4",
+          "lg:h-screen lg:justify-center lg:gap-8 lg:px-2",
           className,
-          hasBackgroundImage ? 'relative overflow-hidden' : ''
+          hasBackgroundImage ? "relative overflow-hidden" : ""
         )}
         {...props}
       >
@@ -54,7 +54,7 @@ export function HeroView({
 
         <div
           className={
-            'relative z-10 flex w-full flex-col items-center gap-8 px-2 lg:gap-10 lg:px-5'
+            "relative z-10 flex w-full flex-col items-center gap-8 px-2 lg:gap-10 lg:px-5"
           }
         >
           {logo && (

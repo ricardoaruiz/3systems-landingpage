@@ -1,5 +1,5 @@
-import { cn } from '@/lib/utils';
-import type { SectionProps } from './section.types';
+import { cn } from "@/lib/utils";
+import type { SectionProps } from "./section.types";
 
 export function SectionView({
   children,
@@ -11,9 +11,9 @@ export function SectionView({
   const internalStyle = backgroundImage
     ? {
         backgroundImage: `url(${backgroundImage})`,
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-        backgroundRepeat: 'no-repeat',
+        backgroundPosition: "center",
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
         ...style,
       }
     : { ...style };

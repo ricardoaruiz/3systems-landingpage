@@ -1,17 +1,18 @@
-import type { Color, Image } from '../types';
+import type { Color, Image } from "../types";
 
 export type Contact = {
   id: string;
   disclamer: string;
-  disclamerBackgroundColor: Color;
-  disclamerTextColor: Color;
-  leftImage: Image;
+  disclamerBackgroundColor?: Color;
+  disclamerTextColor?: Color;
+  leftImage?: Image;
+  contactCompanyName?: string;
+  contactCompanyNameLinkedinHref?: string;
   contactName: string;
-  contactEmailImage: Image;
+  contactNameLinkedinHref?: string;
   contactEmail: string;
-  contactEmailHref?: string;
-  contactPhoneImage: Image;
+  contactEmailHref: string;
   contactPhone: string;
-  contactPhoneHref?: string;
-  rightImage: Image;
+  contactPhoneHref: string;
+  rightImage?: Image;
 };

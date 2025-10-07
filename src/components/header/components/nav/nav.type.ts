@@ -1,3 +1,3 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps } from "react";
 
-export type NavProps = ComponentProps<'nav'>;
+export type NavProps = ComponentProps<"nav">;

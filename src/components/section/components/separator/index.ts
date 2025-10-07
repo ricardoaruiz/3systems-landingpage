@@ -1,1 +1,1 @@
-export { SectionSeparatorView as SectionSeparator } from './section-separator.view';
+export { SectionSeparatorView as SectionSeparator } from "./section-separator.view";

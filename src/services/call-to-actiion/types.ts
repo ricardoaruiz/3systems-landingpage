@@ -1,4 +1,4 @@
-import type { Color, Image } from '../types';
+import type { Color, Image } from "../types";
 
 export type CallToAction = {
   id: string;

@@ -1,1 +1,1 @@
-export { SectionTitleView as SectionTitle } from './section-title.view';
+export { SectionTitleView as SectionTitle } from "./section-title.view";

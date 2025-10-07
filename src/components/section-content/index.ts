@@ -1,1 +1,1 @@
-export { SectionContentView as SectionContent } from './section-content.view';
+export { SectionContentView as SectionContent } from "./section-content.view";

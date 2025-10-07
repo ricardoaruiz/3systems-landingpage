@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import { Section } from '../section';
-import type { SectionCallToActionProps } from './section-call-to-action.types';
+import Image from "next/image";
+import { Section } from "../section";
+import type { SectionCallToActionProps } from "./section-call-to-action.types";
 
 export function SectionCallToActionView({
   id,

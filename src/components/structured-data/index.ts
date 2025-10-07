@@ -1,1 +1,1 @@
-export { StructuredData } from './structured-data';
+export { StructuredData } from "./structured-data";

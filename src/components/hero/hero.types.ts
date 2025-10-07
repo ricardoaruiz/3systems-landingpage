@@ -1,4 +1,4 @@
-import type { ComponentProps } from 'react';
-import type { Hero } from '@/services';
+import type { ComponentProps } from "react";
+import type { Hero } from "@/services";
 
-export type HeroProps = ComponentProps<'section'> & Hero;
+export type HeroProps = ComponentProps<"section"> & Hero;

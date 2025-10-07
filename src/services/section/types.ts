@@ -1,4 +1,4 @@
-import type { Card, Color, Image } from '../types';
+import type { Card, Color, Image } from "../types";
 
 export type Section = {
   id: string;

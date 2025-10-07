@@ -1,5 +1,5 @@
-import type { ComponentProps } from 'react';
+import type { ComponentProps } from "react";
 
-export type SectionBodyProps = ComponentProps<'div'> & {
+export type SectionBodyProps = ComponentProps<"div"> & {
   backgroundImage?: string;
 };

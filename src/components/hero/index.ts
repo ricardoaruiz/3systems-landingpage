@@ -1,1 +1,1 @@
-export { HeroView as Hero } from './hero.view';
+export { HeroView as Hero } from "./hero.view";

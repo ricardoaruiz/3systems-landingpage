@@ -1,9 +1,9 @@
-import Markdown from 'react-markdown';
-import { cn } from '@/lib/utils';
-import { Section } from '../section';
-import { SideContent } from '../side-content';
-import { Cards } from './components/cards';
-import type { SectionContentProps } from './section-content.types';
+import Markdown from "react-markdown";
+import { cn } from "@/lib/utils";
+import { Section } from "../section";
+import { SideContent } from "../side-content";
+import { Cards } from "./components/cards";
+import type { SectionContentProps } from "./section-content.types";
 
 export function SectionContentView({
   data,
@@ -21,11 +21,11 @@ export function SectionContentView({
 
   return (
     <Section.Container
-      className={cn('lg:scroll-mt-15 lg:pb-4', className)}
+      className={cn("lg:scroll-mt-15 lg:pb-4", className)}
       {...props}
     >
       <Section.Header
-        className={cn('flex flex-col items-center justify-center gap-4')}
+        className={cn("flex flex-col items-center justify-center gap-4")}
         style={{ ...backgroundStyle, ...textColorStyle }}
       >
         <Section.Title

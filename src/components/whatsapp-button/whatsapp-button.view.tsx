@@ -1,16 +1,17 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { cn } from '@/lib/utils';
-import whatsappIcon from '../../../public/images/wa_icon.webp';
-import { Tooltip, TooltipContent, TooltipTrigger } from '../ui/tooltip';
-import type { WhatsAppButtonViewProps } from './whatsapp-button.types';
+import Image from "next/image";
+import { cn } from "@/lib/utils";
+import whatsappIcon from "../../../public/images/wa_icon.webp";
+import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
+import type { WhatsAppButtonViewProps } from "./whatsapp-button.types";
 
 export function WhatsAppButtonView({
   className,
+  href,
   ...props
 }: WhatsAppButtonViewProps) {
-  if (!props.href) {
+  if (!href) {
     return null;
   }
 
@@ -22,9 +23,10 @@ export function WhatsAppButtonView({
             <div className="absolute inline-flex h-full w-full animate-ping rounded-full bg-zinc-400 opacity-40" />
             <a
               className={cn(
-                'relative inline-flex size-12 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-primary-3systems p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-1-3systems md:size-16',
+                "relative inline-flex size-12 cursor-pointer items-center justify-center rounded-full border border-zinc-500 bg-primary-3systems p-2 text-zinc-100 shadow-lg shadow-zinc-800 hover:bg-primary-1-3systems md:size-16",
                 className
               )}
+              href={href}
               rel="noopener noreferrer"
               target="_blank"
               {...props}
