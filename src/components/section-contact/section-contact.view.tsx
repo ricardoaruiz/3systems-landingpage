@@ -23,14 +23,17 @@ export function SectionContactView({
   return (
     <Section.Container
       className={cn('bg-zinc-200', className)}
-      id={data?.id}
+      id="historia"
       style={{
         ...disclamerBackgroundColorStyle,
         ...disclamerTextColorStyle,
       }}
       {...props}
     >
-      <Section.Body className="flex flex-col items-center justify-center gap-4 px-0 pb-0 md:max-w-full md:gap-8">
+      <Section.Body
+        className="flex flex-col items-center justify-center gap-4 px-0 pb-0 md:max-w-full md:gap-8"
+        id="contato"
+      >
         <div
           className="contact-disclamer w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-3systems md:max-w-[1200px] md:px-8 md:pb-8 md:text-3xl/relaxed"
           style={{

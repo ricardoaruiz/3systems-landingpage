@@ -17,6 +17,7 @@ export function HeaderView({ menu, className, ...props }: HeaderProps) {
             {item.label}
           </NavLink>
         ))}
+        <NavLink href="#historia">História</NavLink>
         <NavLink href="#contato">Contato</NavLink>
       </Nav>
     </header>
