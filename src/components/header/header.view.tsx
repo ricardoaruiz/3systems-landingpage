@@ -17,7 +17,7 @@ export function HeaderView({ menu, className, ...props }: HeaderProps) {
             {item.label}
           </NavLink>
         ))}
-        <NavLink href="#contact">Contato</NavLink>
+        <NavLink href="#contato">Contato</NavLink>
       </Nav>
     </header>
   );
