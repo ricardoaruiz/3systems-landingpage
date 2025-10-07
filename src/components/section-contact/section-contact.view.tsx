@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Markdown from 'react-markdown';
 import { cn } from '@/lib/utils';
 import { Section } from '../section';
 import type { SectionContactProps } from './section-contact.types';
@@ -30,16 +31,15 @@ export function SectionContactView({
       {...props}
     >
       <Section.Body className="flex flex-col items-center justify-center gap-4 px-0 pb-0 md:max-w-full md:gap-8">
-        <p
-          className="w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-3systems md:max-w-[1200px] md:px-8 md:pb-8 md:text-3xl/relaxed"
+        <div
+          className="contact-disclamer w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-3systems md:max-w-[1200px] md:px-8 md:pb-8 md:text-3xl/relaxed"
           style={{
             ...disclamerBackgroundColorStyle,
             ...disclamerTextColorStyle,
           }}
         >
-          {data.disclamer}
-        </p>
-
+          <Markdown>{data.disclamer}</Markdown>
+        </div>
         <div className="flex w-full flex-col items-center justify-center gap-4 bg-zinc-100 px-4 pt-4 md:flex-row lg:gap-12 lg:pt-0">
           {/* Left Image */}
           <div>

@@ -21,7 +21,7 @@ export function CardContentView({
       {...props}
     >
       <CardContent>
-        <div className="flex min-h-36 items-baseline gap-2">
+        <div className="flex min-h-28 items-baseline gap-2">
           <div className="size-6 pt-[5px]">
             <CircleCheckIcon className="text-green-600" />
           </div>
