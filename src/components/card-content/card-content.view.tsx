@@ -21,15 +21,22 @@ export function CardContentView({
       {...props}
     >
       <CardContent>
-        <div className="flex items-baseline gap-2">
+        <div className="flex min-h-36 items-baseline gap-2">
           <div className="size-6 pt-[5px]">
             <CircleCheckIcon className="text-green-600" />
           </div>
           <div className="flex flex-col justify-center gap-4">
-            <p className="font-bold text-lg/relaxed lg:text-xl/relaxed">
+            <p
+              className={cn('font-bold text-lg/relaxed lg:text-xl/relaxed', {
+                'font-normal': !description,
+              })}
+            >
               {title}
             </p>
-            <p className="text-base/relaxed lg:text-lg">{description}</p>
+
+            {!!description && (
+              <p className="text-base/relaxed lg:text-lg">{description}</p>
+            )}
           </div>
         </div>
       </CardContent>
