@@ -10,6 +10,7 @@ import { WhatsAppButtonView } from "@/components/whatsapp-button/whatsapp-button
 import { getHero } from "@/services";
 import { getCallToAction } from "@/services/call-to-actiion";
 import { getContact } from "@/services/contact/fetcher";
+import { getHistory } from "@/services/history/fetcher";
 import { getMenu } from "@/services/menu/fetcher";
 import { getSections } from "@/services/section";
 
@@ -19,21 +20,18 @@ export default async function Home() {
   const callToActionData = await getCallToAction();
   const sectionsData = await getSections();
   const contactData = await getContact();
+  const historyData = await getHistory();
 
   return (
     <main>
       <Header menu={menuData} />
-      <Hero {...heroData} />
-
-      {callToActionData && <SectionCallToAction {...callToActionData} />}
-
-      <SectionHistory />
+      <Hero data={heroData} />
+      <SectionCallToAction data={callToActionData} />
+      <SectionHistory data={historyData} />
       <SectionCarrier />
-
       {sectionsData.map((section) => (
         <SectionContent data={section} id={section.id} key={section.slug} />
       ))}
-
       <SectionContact data={contactData} />
       <WhatsAppButtonView href={contactData?.contactPhoneHref} />
       <GoToTopButtonView />

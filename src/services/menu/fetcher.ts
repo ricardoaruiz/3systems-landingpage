@@ -7,5 +7,5 @@ import type { MenuItem } from "./types";
 
 export async function getMenu(): Promise<MenuItem[]> {
   const data = await client.fetch<SanityDocument<MenuItem>[]>(MENU_QUERY, {});
-  return data;
+  return data.flat().sort((a, b) => a.order - b.order);
 }

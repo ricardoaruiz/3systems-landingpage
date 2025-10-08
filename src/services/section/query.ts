@@ -1,4 +1,4 @@
-export const SECTIONS_QUERY = `*[_type == "section"] | order(order asc){
+export const SECTIONS_QUERY = `*[_type == "section" && isActive == true] | order(order asc){
   id,
   "slug": tite,
   subject,

@@ -1,4 +1,4 @@
-export const CONTACT_QUERY = `*[_type == "contact"]{
+export const CONTACT_QUERY = `*[_type == "contact"  && isActive == true ]{
   id,
   disclamer,
   disclamerBackgroundColor{

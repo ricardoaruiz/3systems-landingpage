@@ -2,14 +2,12 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import type { HeroProps } from "./hero.types";
 
-export function HeroView({
-  title,
-  description,
-  logo,
-  backgroundImage,
-  className,
-  ...props
-}: HeroProps) {
+export function HeroView({ data, className, ...props }: HeroProps) {
+  if (!data) {
+    return null;
+  }
+
+  const { title, description, logo, backgroundImage } = data;
   const hasBackgroundImage = !!backgroundImage;
   const backgroundImageStyle = hasBackgroundImage
     ? {

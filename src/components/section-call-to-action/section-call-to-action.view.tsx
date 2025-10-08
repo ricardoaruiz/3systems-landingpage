@@ -3,14 +3,14 @@ import { Section } from "../section";
 import type { SectionCallToActionProps } from "./section-call-to-action.types";
 
 export function SectionCallToActionView({
-  id,
-  mainImage,
-  backgroundImage,
-  mainText,
-  color,
-  textColor,
+  data,
   ...props
 }: SectionCallToActionProps) {
+  if (!data) {
+    return null;
+  }
+
+  const { id, mainImage, backgroundImage, mainText, color, textColor } = data;
   const backgroundStyle = color ? { backgroundColor: color.hex } : {};
   const textColorStyle = textColor ? { color: textColor.hex } : {};
 
