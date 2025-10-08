@@ -28,7 +28,6 @@ export function SectionContactView({
   return (
     <Section.Container
       className={cn("bg-zinc-200", className)}
-      id="historia"
       style={{
         ...disclamerBackgroundColorStyle,
         ...disclamerTextColorStyle,
@@ -40,7 +39,7 @@ export function SectionContactView({
         id="contato"
       >
         <div
-          className="contact-disclamer w-full max-w-96 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-3systems md:max-w-[1200px] md:px-8 md:pb-8 md:text-3xl/relaxed"
+          className="contact-disclamer w-full max-w-96 space-y-10 px-4 py-6 text-center font-semibold text-lg/relaxed text-primary-3systems md:max-w-[1200px] md:px-8 md:pb-8 md:text-3xl/relaxed"
           style={{
             ...disclamerBackgroundColorStyle,
             ...disclamerTextColorStyle,

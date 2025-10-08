@@ -12,12 +12,15 @@ export function HeaderView({ menu, className, ...props }: HeaderProps) {
       {...props}
     >
       <Nav>
+        <NavLink href="#historia">História</NavLink>
+        <NavLink href="#carreira">Carreira</NavLink>
+
         {menu.map((item) => (
           <NavLink href={`#${item.href}`} key={item.href}>
             {item.label}
           </NavLink>
         ))}
-        <NavLink href="#historia">História</NavLink>
+
         <NavLink href="#contato">Contato</NavLink>
       </Nav>
     </header>

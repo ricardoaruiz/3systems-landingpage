@@ -2,6 +2,7 @@
 
 import { ChevronsUp } from "lucide-react";
 import { useScroll } from "@/hooks/useScroll";
+import { cn } from "@/lib/utils";
 import { Tooltip, TooltipContent, TooltipTrigger } from "../ui/tooltip";
 
 export function GoToTopButtonView() {
@@ -20,8 +21,9 @@ export function GoToTopButtonView() {
 
   return (
     <div
-      className="fixed right-4 bottom-4 z-50"
+      className={cn("fixed right-4 bottom-4 z-50")}
       data-aos={isOnTop ? "fade-left" : "fade-right"}
+      data-aos-once="false"
     >
       <Tooltip>
         <TooltipTrigger asChild>

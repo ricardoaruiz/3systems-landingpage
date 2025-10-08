@@ -11,7 +11,12 @@
         "noNonNullAssertion": "off"
       },
       "performance": {
-        "noBarrelFile": "off"
+        "noNamespaceImport": "off",
+        "noBarrelFile": "off",
+        "noImgElement": "off"
+      },
+      "nursery": {
+        "useImageSize": "off"
       }
     }
   }

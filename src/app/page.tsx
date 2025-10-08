@@ -2,8 +2,10 @@ import { GoToTopButtonView } from "@/components/go-to-top-button/go-to-top-butto
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
 import { SectionCallToAction } from "@/components/section-call-to-action";
+import { SectionCarrier } from "@/components/section-carrier";
 import { SectionContact } from "@/components/section-contact";
 import { SectionContent } from "@/components/section-content";
+import { SectionHistory } from "@/components/section-history";
 import { WhatsAppButtonView } from "@/components/whatsapp-button/whatsapp-button.view";
 import { getHero } from "@/services";
 import { getCallToAction } from "@/services/call-to-actiion";
@@ -25,9 +27,13 @@ export default async function Home() {
 
       {callToActionData && <SectionCallToAction {...callToActionData} />}
 
+      <SectionHistory />
+      <SectionCarrier />
+
       {sectionsData.map((section) => (
         <SectionContent data={section} id={section.id} key={section.slug} />
       ))}
+
       <SectionContact data={contactData} />
       <WhatsAppButtonView href={contactData?.contactPhoneHref} />
       <GoToTopButtonView />
