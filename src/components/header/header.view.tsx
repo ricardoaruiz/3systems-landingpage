@@ -1,3 +1,4 @@
+import React from "react";
 import { cn } from "@/lib/utils";
 import { Nav, NavLink } from "./components";
 import type { HeaderProps } from "./header.types";
@@ -12,11 +13,23 @@ export function HeaderView({ menu, className, ...props }: HeaderProps) {
       {...props}
     >
       <Nav>
-        {menu.map((item) => (
-          <NavLink href={`#${item.href}`} key={item.href}>
-            {item.label}
-          </NavLink>
-        ))}
+        {menu.map((item, index) => {
+          // TODO remover quando criar o conteúdo de carreira no cms
+          if (index === 1) {
+            return (
+              <React.Fragment key={item.href}>
+                <NavLink href="#carreira">Carreira</NavLink>
+                <NavLink href={`#${item.href}`}>{item.label}</NavLink>
+              </React.Fragment>
+            );
+          }
+
+          return (
+            <NavLink href={`#${item.href}`} key={item.href}>
+              {item.label}
+            </NavLink>
+          );
+        })}
       </Nav>
     </header>
   );
