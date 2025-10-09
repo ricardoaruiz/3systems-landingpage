@@ -29,14 +29,17 @@ export function HeroView({ data, className, ...props }: HeroProps) {
       {...props}
     >
       {hasBackgroundImage && (
-        <div
-          aria-hidden="true"
-          className="absolute inset-0 z-0"
-          style={backgroundImageStyle}
-        />
+        <>
+          <div
+            aria-hidden="true"
+            className="absolute inset-0 z-0"
+            style={backgroundImageStyle}
+          />
+          <div className="absolute inset-0 z-10 bg-gradient-to-t from-primary-3systems/50 via-primary-3systems/30 to-transparent" />
+          {/* <div className="absolute inset-0 z-10 bg-zinc-400/20" /> */}
+        </>
       )}
-
-      <div className="container relative z-10 mx-auto flex w-full flex-1 flex-col items-center gap-8 px-2 lg:justify-center lg:gap-10 lg:px-5">
+      <div className="container relative z-20 mx-auto flex w-full flex-1 flex-col items-center gap-8 px-2 lg:justify-center lg:gap-10 lg:px-5">
         {logo && (
           <div className="relative mt-20 mb-10 h-[82px] w-[250px] md:h-[165px] md:w-[500px] lg:mt-0">
             <Image
@@ -89,6 +92,7 @@ export function HeroView({ data, className, ...props }: HeroProps) {
           </div>
         </a>
       </div>
+      ;
     </section>
   );
 }

@@ -10,7 +10,6 @@ import {
 } from "@/components/ui/timeline";
 import { cn } from "@/lib/utils";
 import { Section } from "../section";
-import { Card, CardContent } from "../ui/card";
 
 const items = [
   {
@@ -42,25 +41,6 @@ A partir do ano de 2008, foi criada a 3 SYSTEMS CONSULTORIA, que atua principalm
   },
 ];
 
-const positionsHelds = [
-  { id: 1, title: "Engenheiro Sênior" },
-  {
-    id: 2,
-    title:
-      "Assessor da Diretoria de Engenharia, Tecnologia e Qualidade Ambiental",
-  },
-  {
-    id: 3,
-    title:
-      "Assistente Executivo da Diretoria de Engenharia, Tecnologia e Qualidade Ambiental",
-  },
-  {
-    id: 4,
-    title:
-      "Gerente Ambiental do Departamento de Desenvolvimento, Tecnologia e Riscos",
-  },
-];
-
 export function SectionCarrier() {
   return (
     <Section.Container className="lg:scroll-mt-15 lg:pb-4" id="carreira">
@@ -74,19 +54,6 @@ export function SectionCarrier() {
         <h2 className="mb-6 w-full font-bold text-lg/relaxed lg:text-2xl/relaxed">
           CETESB - Cia. de Tecnologia de Saneamento Ambiental
         </h2>
-
-        <Card className="mb-10" data-aos="fade-down">
-          <CardContent className="space-y-2">
-            <p className="font-bold text-xl">Cargos ocupados:</p>
-            <ul className="my-6 ml-6 list-disc [&>li]:mt-2">
-              {positionsHelds.map(({ id, title }) => (
-                <li className="lg:text-lg" key={id}>
-                  {title}
-                </li>
-              ))}
-            </ul>
-          </CardContent>
-        </Card>
 
         <Timeline>
           {items.map((item) => (

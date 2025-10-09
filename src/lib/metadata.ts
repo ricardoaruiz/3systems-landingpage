@@ -14,7 +14,19 @@ export function generateMetadata({
   description = "Soluções ambientais para o seu negócio",
   image = "/images/logo_300.webp",
   url = "/",
-  keywords = ["gestão ambiental", "consultoria ambiental"],
+  keywords = [
+    "Angela Machado",
+    "3 Systems",
+    "gestão ambiental",
+    "Áreas Contaminadas",
+    "consultoria ambiental",
+    "resíduos sólidos",
+    "efluentes líquidos",
+    "emergências químicas",
+    "Perito Ambiental",
+    "Gerenciamento de Processos em Áreas Contaminadas",
+    "CETESB",
+  ],
 }: GenerateMetadataParams = {}): Metadata {
   const domain = DOMAIN_URL.endsWith("/")
     ? DOMAIN_URL.slice(0, -1)
@@ -83,13 +95,10 @@ export function generateJsonLd() {
     "@type": "Organization",
     name: "3 Systems - Gestão Ambiental",
     description:
-      "Transforme seu negócio com nossas soluções empresariais completas. Consultoria, gestão e serviços especializados para impulsionar sua empresa.",
+      "Soluções ambientais para o seu negócio. Especialistas em gestão de áreas contaminadas, resíduos sólidos, efluentes líquidos e emergências químicas.",
     url: `${DOMAIN_URL}`,
     logo: `${DOMAIN_URL}/images/logo_300.svg`,
-    sameAs: [
-      // Adicione os links das redes sociais se houver
-      "https://www.linkedin.com/in/angela-machado-bb789330/",
-    ],
+    sameAs: ["https://www.linkedin.com/in/angela-machado-bb789330/"],
     contactPoint: {
       "@type": "ContactPoint",
       contactType: "customer service",

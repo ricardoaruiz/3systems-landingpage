@@ -3,11 +3,11 @@ import { DOMAIN_URL } from "@/constants";
 
 const pages = [
   "",
-  "/#reasons",
-  "/#financial",
-  "/#technical",
-  "/#events",
-  "/#contact",
+  "/#história",
+  "/#carreira",
+  "/#perito-ambiental",
+  "/#areas-contaminadas",
+  "/#contato",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
