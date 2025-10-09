@@ -83,7 +83,7 @@ export function generateMetadata({
       },
     },
     verification: {
-      // google: process.env.GOOGLE_SEARCH_CONSOLE_VERIFICATION_ID, // Adicione quando configurar o Google Search Console
+      google: process.env.GOOGLE_SEARCH_CONSOLE_VERIFICATION_ID,
     },
   };
 }
