@@ -1,6 +1,6 @@
 export const SECTIONS_QUERY = `*[_type == "section" && isActive == true] | order(order asc){
   id,
-  "slug": tite,
+  "slug": slug.current,
   subject,
   description,
   color {
