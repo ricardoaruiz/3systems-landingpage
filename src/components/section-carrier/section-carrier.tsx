@@ -14,30 +14,44 @@ import { Section } from "../section";
 const items = [
   {
     id: 1,
+    // image: "/avatar-40-01.jpg",
     // date: "15 minutes ago",
-    title: "Engenheiro Senior",
     // action: "opened a new issue",
-    description:
-      "Formulação de Planos de Gerenciamento de Resíduos Sólidos Urbanos, Industriais, Hospitalares e de Serviços de Limpeza Pública. Elaboração de Laudos Técnicos para o licenciamento junto aos órgãos ambientais para amostragem de planos de resíduos e efluentes industriais. Elaboração de Planejamento Ambiental. Gerenciamento em resíduos sólidos e sua destinação final. Resíduos industriais: amostragem, classificação, reciclagem, armazenamento e tratamento. Elaboração de planos de gerenciamento e planejamento territorial. Coordenação nos Guias de Produção mais Limpa publicados pela CETESB e FIESP. ",
-    image: "/avatar-40-01.jpg",
+    title: "Engenheiro Senior",
+    description: `Formulação de planos de gerenciamento de resíduos sólidos urbanos, industriais, hospitalares e de serviços de limpeza pública. 
+      Elaboração de laudos técnicos para o licenciamento junto aos órgãos ambientais para amostragem de planos de resíduos e efluentes industriais. 
+      Elaboração de planejamento ambiental. 
+      Gerenciamento em resíduos sólidos e sua destinação final. 
+      Resíduos industriais: amostragem, classificação, reciclagem, armazenamento e tratamento. 
+      Elaboração de planos de gerenciamento e planejamento territorial. 
+      Coordenação nos Guias de Produção mais Limpa publicados pela CETESB e FIESP.`,
   },
   {
     id: 2,
+    // image: "/avatar-40-02.jpg",
     // date: "10 minutes ago",
-    title: "Assessor Técnico e Assistente Executivo da Diretoria de Engenharia",
     // action: "commented on",
-    description:
-      "Coordenação Técnica do Rio Tietê. Acompanhamento técnico junto ao Ministério Público, à Procuradoria-Geral do Estado e ao Departamento Jurídico. Gestão dos Sedimentos; análise de Projetos de Lei do Legislativo Estadual. Elaboração de pareceres técnicos específicos quanto à Flotação do Rio Pinheiros, Aeroportos e outros assuntos, inclusive aqueles pertinentes ao Ministério Público do Estado de São Paulo, com foco na legislação pertinente. Estudos de Impacto Ambiental. ",
-    image: "/avatar-40-02.jpg",
+    title:
+      "Assessora Técnica e Assistente Executiva da Diretoria de Engenharia",
+    description: `Coordenação Técnica do Rio Tietê. 
+      Acompanhamento técnico junto ao Ministério Público, à Procuradoria-Geral do Estado e ao Departamento Jurídico. 
+      Gestão dos sedimentos. Análise de Projetos de Lei do Legislativo Estadual. 
+      Elaboração de pareceres técnicos específicos quanto à flotação do Rio Pinheiros, aeroportos e outros assuntos, inclusive aqueles pertinentes ao Ministério Público do Estado de São Paulo, com foco na legislação pertinente. 
+      Estudos de impacto ambiental.`,
   },
   {
     id: 3,
+    // image: "/avatar-40-03.jpg",
     // date: "5 minutes ago",
-    title: "Gerente do Departamento de Desenvolvimento, Tecnologia e Riscos",
     // action: "assigned you to",
-    description: `Oferecer subsídios técnicos às atividades de controle, fiscalização e licenciamento. Realizou estudos relacionados aos instrumentos, resoluções técnico-legais, procedimentos, políticas públicas e projetos que levem à adoção da prevenção à poluição, que abrange a produção mais limpa e a análise de riscos, o suporte técnico quanto aos aspectos de acidentes químicos e a prestação de serviços quanto à calibração e verificação de instrumentos, bem como na coordenação e execução de ensaios de proficiência para comparação interlaboratorial. Outra função do Departamento era participar das ações de transferência de tecnologia, por meio do desenvolvimento de cursos técnicos para o público interno e externo, de palestras e treinamentos práticos especializados e estágios. 
-A partir do ano de 2008, foi criada a 3 SYSTEMS CONSULTORIA, que atua principalmente no Gerenciamento de Áreas Contaminadas. Também possui bom relacionamento com o órgão ambiental do Estado de São Paulo e atua em licenciamento ambiental de vários empreendimentos.`,
-    image: "/avatar-40-03.jpg",
+    title: "Gerente do Departamento de Desenvolvimento, Tecnologia e Riscos",
+    description: `Como principal função, o departamento oferecia subsídios técnicos às atividades de controle, fiscalização e licenciamento. 
+    Realizou estudos relacionados aos instrumentos, resoluções técnico-legais, procedimentos, 
+    políticas públicas e projetos que levem à adoção da prevenção à poluição, que abrange a produção 
+    mais limpa e a análise de riscos, o suporte técnico quanto aos aspectos de acidentes químicos e a 
+    prestação de serviços quanto à calibração e verificação de instrumentos, bem como na coordenação e 
+    execução de ensaios de proficiência para comparação interlaboratorial. 
+    Outra função do departamento era participar das ações de transferência de tecnologia, por meio do desenvolvimento de cursos técnicos para o público interno e externo, de palestras e treinamentos práticos especializados e estágios. `,
   },
 ];
 
